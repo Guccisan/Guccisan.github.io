@@ -4,10 +4,127 @@
 <head>
     <meta charset="utf-8">
     <title>test</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <!-- スタイル -->
+    <style>
+        body {
+            background-color: black;
+            margin: 2%;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2em;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
+        li {
+            color: white;
+            font-size: 1em;
+        }
+
+        .menu-trigger,
+        .menu-trigger span {
+            display: inline-block;
+            transition: all .4s;
+            box-sizing: border-box;
+        }
+
+        .menu-trigger {
+            position: relative;
+            width: 50px;
+            height: 44px;
+            z-index: 10;
+        }
+
+        .menu-trigger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+
+        .menu-trigger span:nth-of-type(1) {
+            top: 0;
+        }
+
+        .menu-trigger span:nth-of-type(2) {
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .menu-trigger span:nth-of-type(3) {
+            bottom: 0;
+        }
+
+
+        .menu-trigger.active span:nth-of-type(1) {
+            -webkit-transform: translateY(20px) rotate(-315deg) scale(.8);
+            transform: translateY(20px) rotate(-315deg) scale(.8);
+        }
+
+        .menu-trigger.active span:nth-of-type(2) {
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            border: 3px solid #fff;
+            border-radius: 50%;
+        }
+
+        .menu-trigger.active span:nth-of-type(3) {
+            -webkit-transform: translateY(-20px) rotate(315deg) scale(.8);
+            transform: translateY(-20px) rotate(315deg) scale(.8);
+        }
+
+        .menu_contents {
+            display: none;
+        }
+        .menu_contents.active{
+            display: inline;
+            width: 100%;
+            height: 1000px;
+            background: #AAA;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition: left 0.4s;
+            transition: left 0.4s;
+            z-index: 4;
+        }
+    </style>
+
 </head>
 
 <body>
-    <p1>this is test html</p1>
+    <a class="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a class="menu_contents">
+        <ul>
+            <li>モーツァルト</li>
+            <li>バッハ</li>
+            <li>ベートーベン</li>
+            <li>ショパン</li>
+            <li>ラフマニノフ</li>
+        </ul>
+    </a>
+    <h1>this is test html</h1>
+
+    <script>
+        $(function () {
+            $('.menu-trigger').on('click', function () {
+                $(this).toggleClass('active');
+                $('.menu_contents').toggleClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
