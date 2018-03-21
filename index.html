@@ -19,10 +19,7 @@
             margin-bottom: 1%;
         }
 
-        li {
-            color: white;
-            font-size: 1em;
-        }
+        /* ▼▼メニューアイコン */
 
         .menu-trigger,
         .menu-trigger span {
@@ -32,9 +29,14 @@
         }
 
         .menu-trigger {
-            position: relative;
-            width: 50px;
-            height: 44px;
+            position: fixed;
+            /* ヘッダーの固定 */
+            top: 20px;
+            /* 位置(上0px) */
+            left: 14px;
+            /* 位置(右0px) */
+            width: 100px;
+            height: 88px;
             z-index: 10;
         }
 
@@ -42,9 +44,9 @@
             position: absolute;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 8px;
             background-color: #fff;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
         .menu-trigger span:nth-of-type(1) {
@@ -64,64 +66,186 @@
 
 
         .menu-trigger.active span:nth-of-type(1) {
-            -webkit-transform: translateY(20px) rotate(-315deg) scale(.8);
-            transform: translateY(20px) rotate(-315deg) scale(.8);
+            -webkit-transform: translateY(40px) rotate(-315deg) scale(.8);
+            transform: translateY(40px) rotate(-315deg) scale(.8);
         }
 
         .menu-trigger.active span:nth-of-type(2) {
-            width: 60px;
-            height: 60px;
+            width: 120px;
+            height: 120px;
             background-color: transparent;
-            border: 3px solid #fff;
+            border: 6px solid #fff;
             border-radius: 50%;
         }
 
         .menu-trigger.active span:nth-of-type(3) {
-            -webkit-transform: translateY(-20px) rotate(315deg) scale(.8);
-            transform: translateY(-20px) rotate(315deg) scale(.8);
+            -webkit-transform: translateY(-40px) rotate(315deg) scale(.8);
+            transform: translateY(-40px) rotate(315deg) scale(.8);
         }
 
+        /* ▲▲メニューアイコン */
+
+        /* .menu,
         .menu_contents {
             display: none;
         }
-        .menu_contents.active{
+
+        .menu.active {
             display: inline;
             width: 100%;
             height: 1000px;
-            background: #AAA;
+            background: #2F2F2F;
             position: absolute;
             top: 0;
             left: 0;
-            -webkit-transition: left 0.4s;
-            transition: left 0.4s;
+            animation: fadeIn 0.5s ease 0s 1 normal;
+            -webkit-animation: fadeIn 0.5s ease 0s 1 normal;
+            z-index: 2;
+        } */
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #2F2F2F;
+            opacity: 0.9;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .menu_contents {
+            color: white;
+            list-style: none;
+            padding: 0;
+            margin-left: 70px;
+            margin-top: 70px;
+        }
+
+        /* @keyframes fadeIn {
+            0% {
+                opacity: 0
+            }
+            100% {
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0
+            }
+            100% {
+                opacity: 1
+            }
+        }
+
+                @keyframes fadeOut {
+            0% {
+                opacity: 1
+            }
+            100% {
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes fadeOut {
+            0% {
+                opacity: 1
+            }
+            100% {
+                opacity: 0
+            }
+        } */
+
+        /* .menu_contents.active {
+            display: table;
+            color: white;
+            list-style: none;
+            padding: 0;
+            margin-left: 65px;
+            margin-top: 65px;
+        } */
+
+        .links {
+            display: block;
+            color: white;
+            width: 100%;
+            font-size: 1em;
+            margin-bottom: 0.5em;
+            text-decoration: none;
             z-index: 4;
+        }
+
+        .menu_t {
+            color: white;
+            font-size: 2em;
+            width: 100%;
+            margin: 0;
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            background-color: #5f5c5c;
+            z-index: 1;
+        }
+
+        .fixing-base .fixing-box.fixed {
+            position: fixed;
+            top: 0;
+            z-index: 9999;
         }
     </style>
 
 </head>
 
 <body>
-    <a class="menu-trigger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
-    <a class="menu_contents">
-        <ul>
-            <li>モーツァルト</li>
-            <li>バッハ</li>
-            <li>ベートーベン</li>
-            <li>ショパン</li>
-            <li>ラフマニノフ</li>
-        </ul>
-    </a>
-    <h1>this is test html</h1>
+    <div>
+        <a class="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <nav class="menu">
+            <ul class="menu_contents">
+                <li>
+                    <p class="menu_t">Links</p>
+                    <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                    <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                    <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                    <p class="menu_t">Others</p>
+                    <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                    <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <h1>this is test html</h1>
+        her 熊本という地名は、古くは隈本と書いた。隈本の由来には諸説あるが、菊池則隆に因むとする伝承がある。「隈本」の名が文献に見られるのは南北朝時代以降で、これを加藤清正が「隈」の字が畏（おそれる、かしこまる）の字を含むため武将の居城の名に相応しくないとして「熊」の字を充てたと言われている。なお「来熊（らいゆう）」「訪熊（ほうゆう）」「帰熊（きゆう）」と1文字で略するときは「熊（「ゆう」と音読み）」を使用する。
+        地理・地域 九州本島の中央部に位置し、福岡、大分、宮崎、鹿児島の各県と境を接する。海上で有明海を隔て長崎県とも接する。東部の阿蘇地方に日本第2位の阿蘇カルデラを持つ阿蘇山や九州山地の山々が聳え、西部は熊本平野が有明海に、八代平野および芦北地方のリアス式海岸が不知火海に面する。その間に宇土半島が突き出し天草諸島に続いている。中心都市である熊本市は、市域の70万人超の人口を支える水道水が全て地下水でまかなわれている世界でも稀有な都市である。
+        気候 気候は県内全域が太平洋側気候に属し温暖だが、冬と夏で寒暑の差が激しい。冬の気温は緯度の割には寒冷である。 熊本地方 熊本市の年平均気温は約16 - 17℃である。有明海に面しているが、熊本平野は金峰山と阿蘇山との間で盆地を形成するため、内陸型気候に近い。夏場は気温が35℃を越す猛暑になることも少なくなく、夕刻には『肥後の夕凪』と呼ばれる無風状態となるために非常に蒸し暑い。2005年には年間106日の真夏日を記録している。梅雨期の6月・7月には年平均降水量約2,000mmのうち約40%が集中する。冬は降雪や積雪は少ないが朝方の冷え込みが厳しく、1981
+        - 2010年の統計によると1月は平均12.4日が最低気温0℃以下の冬日となる。 阿蘇地方 山地型気候で、九州随一の寒冷地である。冬は九州山地や阿蘇山では毎年多量の積雪となるが、中国地方以東のように豪雪地帯には指定されていない。最低気温も氷点下まで下がることがほとんどである。寒気が流れ込むと阿蘇山上では稀に−15℃程度まで気温が下がる。
+        夏は熊本市周辺が35℃以上の猛暑であっても20℃台の気温が続く冷涼な気候である。阿蘇山上で気温が30℃に達することはない。降水量も多く年間を通して2,800mm程度と多雨である。 天草・芦北地方 海洋性気候で、寒暖の差が小さい。年平均気温が16
+        - 17℃、真冬でも平均最低気温が2 - 5℃前後と暖かい。年間を通した降水量は2,000mm程度である。 球磨地方 人吉盆地を中心とした内陸気候と山地型の気候であり、寒暖の差が激しい。年降水量も2,400mm程度と多いほか、夏は猛暑日になることもあり冬には最低気温が氷点下まで下がる冬日も多い。
+    </div>
 
     <script>
         $(function () {
+            $('.menu').hide();//はじめはメニュー非表示
             $('.menu-trigger').on('click', function () {
-                $(this).toggleClass('active');
-                $('.menu_contents').toggleClass('active');
+                $(this).toggleClass('active');//メニューのアイコン変更
+                $('.menu').stop().fadeToggle(400);// 連打で暴走しないようにstop()も設定
+            });
+            $('.links').hover(function () {//マウスを乗せたら発動
+                $(this).css('background', '#AAA');//マウスを乗せたら色が変わる
+            }, function () {//ここにはマウスを離したときの動作を記述
+                $(this).css('background', '');//色指定を空欄にすれば元の色に戻る
             });
         });
     </script>
