@@ -13,6 +13,7 @@
     <style>
         @media screen and (min-width: 769px) {
             body {
+                font-family: sans-serif;
                 background-color: black;
                 margin: 2%;
             }
@@ -207,10 +208,14 @@
 
         @media screen and (max-width: 768px) {
             body {
+                font-family: sans-serif;
                 width: 100%;
                 height: 100%;
                 background-color: black;
-                margin: 2%;
+                margin-left: 2%;
+                margin-right: 2%;
+                margin-top: 2%;
+                margin-bottom: 2%;
             }
 
             h1 {
@@ -472,11 +477,11 @@
                 $(this).toggleClass('active');//メニューのアイコン変更
                 $('.menu').stop().fadeToggle(400);// 連打で暴走しないようにstop()も設定
             });
-            $('.links').hover(function () {//マウスを乗せたら発動
-                $(this).css('background', '#AAA');//マウスを乗せたら色が変わる
-            }, function () {//ここにはマウスを離したときの動作を記述
-                $(this).css('background', '');//色指定を空欄にすれば元の色に戻る
-            });
+            // $('.links').hover(function () {//マウスを乗せたら発動
+            //     $(this).css('background', '#AAA');//マウスを乗せたら色が変わる
+            // }, function () {//ここにはマウスを離したときの動作を記述
+            //     $(this).css('background', '');//色指定を空欄にすれば元の色に戻る
+            // });
         });
     </script>
 </body>
