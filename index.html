@@ -84,17 +84,38 @@
         .menu_contents {
             display: none;
         }
-        .menu_contents.active{
+
+        .menu_contents.active {
             display: inline;
             width: 100%;
             height: 1000px;
             background: #AAA;
+            filter: alpha(opacity=90);
+            -moz-opacity: 0.9;
+            opacity: 0.9;
             position: absolute;
             top: 0;
-            left: 0;
+            left: 0%;
             -webkit-transition: left 0.4s;
             transition: left 0.4s;
             z-index: 4;
+        }
+
+        .hm_title {
+            /* ハンバーガーメニューオープン時の見出し */
+            position: relative;
+            color: #000;
+            display: inline-block;
+            float: left;
+            font-weight: 100;
+            line-height: 30px;
+            margin: 0 0 0 15px;
+            opacity: 0;
+            -webkit-transform: translate3d(0, -15px, 0);
+            transform: translate3d(0, -15px, 0);
+            -webkit-transition: -webkit-transform 0.6s, opacity 0.5s;
+            transition: transform 0.6s, opacity 0.5s;
+            z-index: 5;
         }
     </style>
 
@@ -106,7 +127,8 @@
         <span></span>
         <span></span>
     </a>
-    <a class="menu_contents">
+    <div class="menu_contents">
+        <h2 class="hm_title">menu</h2>
         <ul>
             <li>モーツァルト</li>
             <li>バッハ</li>
@@ -114,7 +136,7 @@
             <li>ショパン</li>
             <li>ラフマニノフ</li>
         </ul>
-    </a>
+    </div>
     <h1>this is test html</h1>
 
     <script>

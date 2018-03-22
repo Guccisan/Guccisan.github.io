@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <!-- スタイル -->
+    <style>
+        body {
+            background-color: black;
+            margin: 2%;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2em;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
+        li {
+            color: white;
+            font-size: 1em;
+        }
+
+        /* ▽▽ハンバーガーメニュー▽▽
+------------------------------------------------------- */
+
+        .hm_menu_check {
+            /* チェックボックスを隠す */
+            display: none;
+        }
+
+        .hm_wrap {
+            display: inline-block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            z-index: 1024;
+        }
+
+        label {
+            /*padding: 10px 10px;*/
+            /*border: 2px solid #444;*/
+            /*border-radius: 24px;*/
+            /*background :rgba(88,82,82,0.5);*/
+        }
+
+        .hm_title {
+            /* ハンバーガーメニューオープン時の見出し */
+            position: relative;
+            color: #fff;
+            display: inline-block;
+            float: left;
+            font-weight: 100;
+            line-height: 30px;
+            margin: 0 0 0 15px;
+            opacity: 0;
+            -webkit-transform: translate3d(0, -15px, 0);
+            transform: translate3d(0, -15px, 0);
+            -webkit-transition: -webkit-transform 0.6s, opacity 0.5s;
+            transition: transform 0.6s, opacity 0.5s;
+            z-index: 5;
+        }
+
+        /* ▽▽メニューボタン▽▽ */
+
+        .hm_btn {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: block;
+            float: left;
+            z-index: 5;
+        }
+
+        .hm_btn::before {
+            -webkit-box-shadow: #fff 0 12px 0;
+            box-shadow: #fff 0 12px 0;
+        }
+
+        .hm_btn::after {
+            bottom: 0;
+        }
+
+        .hm_btn::before,
+        .hm_btn::after {
+            width: 30px;
+            height: 6px;
+            background: #fff;
+            display: block;
+            content: '';
+            position: absolute;
+            -webkit-transition: -webkit-box-shadow 0.2s linear, -webkit-transform 0.2s 0.2s;
+            transition: box-shadow 0.2s linear, transform 0.2s 0.2s;
+        }
+
+        /* △△メニューボタン△△ */
+
+        .hm_menu_wrap {
+            width: 100%;
+            height: 10000px;
+            background: #2F2F2F;
+
+            filter: alpha(opacity=90);
+            -moz-opacity: 0.9;
+            opacity: 0.9;
+
+            position: absolute;
+            left: -100%;
+            top: 0;
+            -webkit-transition: left 0.4s;
+            transition: left 0.4s;
+            z-index: 4;
+        }
+
+        /* ▽▽開閉時のアニメーション▽▽ */
+
+        .hm_menu_check:checked~.hm_title {
+            opacity: 1;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+        }
+
+        .hm_menu_check:checked~.hm_btn::before {
+            -webkit-box-shadow: transparent 0 0 0;
+            box-shadow: transparent 0 0 0;
+            -webkit-transform: rotate(45deg) translate3d(6px, 11px, 0);
+            transform: rotate(45deg) translate3d(6px, 11px, 0);
+        }
+
+        .hm_menu_check:checked~.hm_btn::after {
+            -webkit-transform: rotate(-45deg) translate3d(6px, -11px, 0);
+            transform: rotate(-45deg) translate3d(6px, -11px, 0);
+        }
+
+        .hm_menu_check:checked~.hm_menu_wrap {
+            left: 0;
+        }
+
+        /* △△開閉時のアニメーション△△ */
+
+        /* ▽▽メニュー内のリストスタイル▽▽ */
+
+        .hm_list {
+            list-style-type: none;
+            margin: 50px 0 0;
+            padding: 0;
+        }
+
+        .hm_list li a {
+            color: #fff;
+            display: block;
+            overflow: hidden;
+            padding: 8px 22px;
+            position: relative;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .hm_list li a::before {
+            /* aタグマウスオーバー時の背景 */
+            background: #808080;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 100%;
+            left: 0;
+            -webkit-transition: bottom 0.4s;
+            transition: bottom 0.4s;
+            z-index: -1;
+        }
+
+        .hm_list li a:hover::before {
+            bottom: 0;
+        }
+
+        .hm_list li a:hover::after {
+            opacity: 0.5;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* メニュー内のリストスタイル△△ */
+
+        /* △△ハンバーガーメニュー△△
+------------------------------------------------------- */
+.menu-trigger,
+        .menu-trigger span {
+            display: inline-block;
+            transition: all .4s;
+            box-sizing: border-box;
+        }
+
+        .menu-trigger {
+            position: relative;
+            width: 50px;
+            height: 44px;
+            z-index: 10;
+        }
+
+        .menu-trigger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+
+        .menu-trigger span:nth-of-type(1) {
+            top: 0;
+        }
+
+        .menu-trigger span:nth-of-type(2) {
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .menu-trigger span:nth-of-type(3) {
+            bottom: 0;
+        }
+
+
+        .menu-trigger.active span:nth-of-type(1) {
+            -webkit-transform: translateY(20px) rotate(-315deg) scale(.8);
+            transform: translateY(20px) rotate(-315deg) scale(.8);
+        }
+
+        .menu-trigger.active span:nth-of-type(2) {
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            border: 3px solid #fff;
+            border-radius: 50%;
+        }
+
+        .menu-trigger.active span:nth-of-type(3) {
+            -webkit-transform: translateY(-20px) rotate(315deg) scale(.8);
+            transform: translateY(-20px) rotate(315deg) scale(.8);
+        }
+
+        .menu_contents {
+            display: none;
+        }
+        .menu_contents.active{
+            display: inline;
+            width: 100%;
+            height: 1000px;
+            background: #AAA;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition: left 0.4s;
+            transition: left 0.4s;
+            z-index: 4;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--▼▼ハンバーガーメニューここから▼▼-->
+    <div class="hm_wrap">
+            <a class="menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+        <h2 class="hm_title">MENU</h2>
+        <nav class="hm_menu_wrap">
+            <ul class="hm_list">
+                <li>
+                    <a href="#">ホーム</a>
+                </li>
+                <li>
+                    <a href="kosensai_map.html">校内マップ</a>
+                </li>
+                <li>
+                    <a href="schedule1.html">高専祭タイムスケジュール</a>
+                </li>
+                <li>
+                    <a href="#">球技大会</a>
+                </li>
+                <br>
+                <li>
+                    <a href="http://www.kumamoto-nct.ac.jp/">熊本高専公式ホームページ</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--▲▲ハンバーガーメニューここまで▲▲-->
+    <h1>this is test html</h1>
+
+    <script>
+        $(function () {
+            $('.menu-trigger').on('click', function () {
+                $(this).toggleClass('active');
+                $('.menu_contents').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
