@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="t.css">
+    <link rel="stylesheet" type="text/css" href="pc.css">
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#container").load("contents.txt");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <p>header</p>
+            <h1>this is test web page</h1>
+        </div>
+        <div>
+            <a class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav class="menu">
+                <ul class="menu_contents">
+                    <li>
+                        <p class="menu_t">Links</p>
+                        <a class="links" href="../index.html">前</a>
+                        <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                        <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                        <p class="menu_t">Others</p>
+                        <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                        <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main">
+            main
+        </div>
+
+        <div class="main">
+            ※この記事は外部から読み込んでいます。
+            <br>
+            <!-- テキストを表示する部分 -->
+            <div id="container"></div>
+        </div>
+
+        <p id="pageTop">
+            <a href="#">&nbsp;&nbsp;^</a>
+        </p>
+
+        <div class="footer">
+            <p>footer</p>
+            <h1>this is test web page</h1>
+        </div>
+
+        <div class="bottom">
+            <p>Gucci 2018(bottom)</p>
+        </div>
+    </div>
+
+
+    <!-- bodyを閉じる直前でjQueryを読み込む -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.menu').hide();//はじめはメニュー非表示
+            $('.menu-trigger').on('click', function () {
+                $(this).toggleClass('active');//メニューのアイコン変更
+                $('.menu').stop().fadeToggle(400);// 連打で暴走しないようにstop()も設定
+            });
+        });
+
+        //■page topボタン
+        $(function () {
+            var topBtn = $('#pageTop');
+            topBtn.hide();
+            //◇ボタンの表示設定
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 80) {
+                    //---- 画面を80pxスクロールしたら、ボタンを表示する
+                    topBtn.fadeIn();
+                } else {
+                    //---- 画面が80pxより上なら、ボタンを表示しない
+                    topBtn.fadeOut();
+                }
+            });
+
+            // ◇ボタンをクリックしたら、スクロールして上に戻る
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

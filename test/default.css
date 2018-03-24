@@ -1,0 +1,105 @@
+   body {
+        font-family: sans-serif;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        margin: 0%;
+    }
+
+    /* ▼▼メニューアイコン */
+    .menu-trigger,
+    .menu-trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+    }
+
+    .menu-trigger {
+        position: fixed;
+        /* ヘッダーの固定 */
+        top: 10px;
+        /* 位置(上0px) */
+        right: 2%;
+        /* 位置(右0px) */
+        width: 55px;
+        height: 44px;
+        z-index: 10;
+    }
+
+    .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    .menu-trigger span:nth-of-type(1) {
+        top: 0;
+    }
+
+    .menu-trigger span:nth-of-type(2) {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    .menu-trigger span:nth-of-type(3) {
+        bottom: 0;
+    }
+
+
+    .menu-trigger.active span:nth-of-type(1) {
+        -webkit-transform: translateY(20px) rotate(-315deg) scale(.8);
+        transform: translateY(20px) rotate(-315deg) scale(.8);
+    }
+
+    .menu-trigger.active span:nth-of-type(2) {
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+
+    .menu-trigger.active span:nth-of-type(3) {
+        -webkit-transform: translateY(-20px) rotate(315deg) scale(.8);
+        transform: translateY(-20px) rotate(315deg) scale(.8);
+    }
+
+    /* ▲▲メニューアイコン */
+
+    /* 表示の乱れ防止 */
+    .wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+
+    /* ▼▼一番上に行くボタン */
+    #pageTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #pageTop a {
+        display: block;
+        z-index: 999;
+        padding: 8px 0 0 8px;
+        border-radius: 30px;
+        width: 35px;
+        height: 35px;
+        background-color: rgb(255, 44, 237);
+        opacity: 0.6;
+        text-align: left;
+    }
+
+    #pageTop a:hover {
+        background-color: rgb(243, 148, 235);
+        opacity: 1;
+    }
+    /* ▲▲一番上に行くボタン */
