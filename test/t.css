@@ -90,4 +90,10 @@
                 color: #FF822C;
             }
             /* ▲▲メニュー */
+            .img{
+                width: 50%;
+                height: auto;
+                float: right;
+                margin-right: 1%;
+            }
         }

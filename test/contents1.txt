@@ -3,12 +3,10 @@ Edit-find-replace.svg<br>
 この記事には独自研究が含まれているおそれがあります。問題箇所を検証し出典を追加して、記事の改善にご協力ください。議論はノートを参照してください。（2015年1月）<br>
 あいちけん<br>
 愛知県<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Inuyama_Castle_and_Kiso_River.JPG/450px-Inuyama_Castle_and_Kiso_River.JPG" class="img">
+Inuyama Castle and Kiso River.JPG<br>
 木曽川と犬山城<br>
 愛知県の旗	愛知県章<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Flag_of_Aichi_Prefecture.svg/150px-Flag_of_Aichi_Prefecture.svg.png" class="img">
 愛知県旗	愛知県章<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Emblem_of_Aichi_Prefecture.svg/120px-Emblem_of_Aichi_Prefecture.svg.png" class="img">
 国	日本の旗 日本<br>
 地方	中部地方、東海地方<br>
 団体コード	23000-6<br>
@@ -29,15 +27,11 @@ ISO 3166-2:JP	JP-23<br>
 法人番号	1000020230006<br>
 所在地	〒460-8501<br>
 愛知県名古屋市中区三の丸3丁目1番2号<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/090408_aichi_kenchou.jpg/330px-090408_aichi_kenchou.jpg" class="img">
 北緯35度10分48.6秒東経136度54分23.1秒座標: 北緯35度10分48.6秒 東経136度54分23.1秒<br>
 愛知県庁<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Map_of_Japan_with_highlight_on_23_Aichi_prefecture.svg/480px-Map_of_Japan_with_highlight_on_23_Aichi_prefecture.svg.png" class="img">
 外部リンク	愛知県<br>
 愛知県の位置<br>
-
 愛知県行政区画図<br>
-<img src="https://upload.wikimedia.org/wikipedia/ja/thumb/2/20/%E5%8C%85%E6%8B%AC%E8%87%AA%E6%B2%BB%E4%BD%93%E5%8C%BA%E7%94%BB%E5%9B%B3_23000.svg/480px-%E5%8C%85%E6%8B%AC%E8%87%AA%E6%B2%BB%E4%BD%93%E5%8C%BA%E7%94%BB%E5%9B%B3_23000.svg.png" class="img">
 <br>
 ■ ― 政令指定都市 / ■ ― 市 / ■ ― 町 / ■ ― 村<br>
 <br>
@@ -130,22 +124,16 @@ MapFan Mapion Yahoo! NAVITIME ゼンリン<br>
 地理・地域<br>
 <br>
 名古屋都心から臨む濃尾平野<br>
-<img src="" class="img">
 <br>
 豊田市中心部を流れる矢作川<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/View_from_Nagoya_TV_Tower_%28northwest%29.JPG/300px-View_from_Nagoya_TV_Tower_%28northwest%29.JPG" class="img">
 <br>
 萩太郎山にある茶臼山高原スキー場<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yahagi_River_%26_Toyota_Stadium%2C_Shirahama-cho_Toyota_2011.JPG/300px-Yahagi_River_%26_Toyota_Stadium%2C_Shirahama-cho_Toyota_2011.JPG" class="img">
 <br>
 香嵐渓の紅葉ライトアップ<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hagitarouyama02.jpg/300px-Hagitarouyama02.jpg" class="img">
 <br>
 三河湾に浮かぶ佐久島<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sakushima_East_House_2011-08.JPG/300px-Sakushima_East_House_2011-08.JPG" class="img">
 <br>
 宇連川と桜淵公園<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Sakurabuchi_park1.JPG/300px-Sakurabuchi_park1.JPG" class="img">
 位置<br>
 東端 - 東経137度50分28秒（北設楽郡豊根村上手）<br>
 西端 - 東経136度40分26秒（愛西市立田町福原）<br>
@@ -524,7 +512,6 @@ Flag of Nagano Prefecture.svg 長野県：下伊那郡根羽村、下伊那郡�
   10.0 % 以上<br>
 Demography23000.svg<br>
 愛知県と全国の年齢別人口分布（2005年）	愛知県の年齢・男女別人口分布（2005年）<br>
-<img src="https://upload.wikimedia.org/wikipedia/ja/thumb/7/79/Demography23000.svg/768px-Demography23000.svg.png" class="img">
 ■紫色 ― 愛知県<br>
 ■緑色 ― 日本全国<br>
 ■青色 ― 男性<br>

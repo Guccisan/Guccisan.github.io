@@ -83,4 +83,9 @@
         color: #FF822C;
     }
     /* ▲▲メニュー */
+    .img{
+        width: 30%;
+        height: auto;
+        float:right;
+    }
 }
