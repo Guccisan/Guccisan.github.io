@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>File 読み込みテスト</title>
+
+    <!-- スタイル -->
+    <style>
+        @media screen and (min-width: 769px) {
+            * {
+                font-family: sans-serif;
+            }
+            pre {
+                color: red;
+            }
+
+            body {
+                font-family: sans-serif;
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                margin: 0%;
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .header {
+                width: 100%;
+                height: 100%;
+                padding: 2% 10% 2% 10%;
+                background-color: cornflowerblue;
+            }
+            .main {
+                width: 80%;
+                height: 100%;
+                background-color: #5f5c5c;
+                font-size: 1em;
+                margin: 2% 9% 2% 9%;
+                padding: 1%;
+                z-index: 1;
+            }
+            .footer {
+                width: 100%;
+                height: 100%;
+                padding: 2% 10% 2% 10%;
+                background-color: darkorange;
+            }
+            .bottom {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                background-color: darkgreen;
+            }
+            .bottom p {
+                margin: 0%;
+            }
+
+            /* ▼▼メニューアイコン */
+            .menu-trigger,
+            .menu-trigger span {
+                display: inline-block;
+                transition: all .4s;
+                box-sizing: border-box;
+            }
+
+            .menu-trigger {
+                position: fixed;
+                /* ヘッダーの固定 */
+                top: 10px;
+                /* 位置(上0px) */
+                right: 2%;
+                /* 位置(右0px) */
+                width: 55px;
+                height: 44px;
+                z-index: 10;
+            }
+
+            .menu-trigger span {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: #fff;
+                border-radius: 4px;
+            }
+
+            .menu-trigger span:nth-of-type(1) {
+                top: 0;
+            }
+
+            .menu-trigger span:nth-of-type(2) {
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate3d(-50%, -50%, 0);
+                transform: translate3d(-50%, -50%, 0);
+            }
+
+            .menu-trigger span:nth-of-type(3) {
+                bottom: 0;
+            }
+
+
+            .menu-trigger.active span:nth-of-type(1) {
+                -webkit-transform: translateY(20px) rotate(-315deg) scale(.8);
+                transform: translateY(20px) rotate(-315deg) scale(.8);
+            }
+
+            .menu-trigger.active span:nth-of-type(2) {
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                border: 3px solid #fff;
+                border-radius: 50%;
+            }
+
+            .menu-trigger.active span:nth-of-type(3) {
+                -webkit-transform: translateY(-20px) rotate(315deg) scale(.8);
+                transform: translateY(-20px) rotate(315deg) scale(.8);
+            }
+
+            /* ▲▲メニューアイコン */
+            /* ▼▼メニュー */
+            .menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: #2F2F2F;
+                opacity: 0.9;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                text-align: center;
+            }
+
+            .menu_contents {
+                list-style: none;
+                padding: 0;
+                margin-top: 70px;
+            }
+
+            .links {
+                display: block;
+                width: 100%;
+                font-size: 1em;
+                margin-top: 0.5em;
+                z-index: 4;
+            }
+            .links:hover {
+                text-decoration: underline;
+                color: #FF822C;
+            }
+
+            .menu_t {
+                font-size: 2em;
+                width: 100%;
+                margin: 0;
+                border-bottom: solid 3px #FFF;
+            }
+            /* ▲▲メニュー */
+            /* 表示の乱れ防止 */
+            .wrap {
+                width: 100%;
+                overflow: hidden;
+            }
+
+
+
+            /* ▼▼一番上に行くボタン */
+            #pageTop {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            #pageTop a {
+                display: block;
+                z-index: 999;
+                padding: 8px 0 0 8px;
+                border-radius: 30px;
+                width: 35px;
+                height: 35px;
+                background-color: rgb(255, 44, 237);
+                opacity: 0.6;
+                text-align: left;
+            }
+
+            #pageTop a:hover {
+                background-color: rgb(243, 148, 235);
+                opacity: 1;
+            }
+            /* ▲▲一番上に行くボタン */
+        }
+
+
+
+
+        @media screen and (max-width: 768px) {
+            * {
+                font-family: sans-serif;
+            }
+            html {
+                overflow-x: hidden;
+                width: 100%;
+            }
+            body {
+                overflow-x: hidden;
+                font-family: sans-serif;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                margin: 0%;
+            }
+            pre {
+                color: blueviolet;
+            }
+
+            h1 {
+                color: white;
+                font-size: 24px;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+            .header {
+                width: 100%;
+                height: 100%;
+                padding: 5%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                background-color: cornflowerblue;
+            }
+            .footer {
+                width: 100%;
+                height: 100%;
+                padding: 5%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                background-color: darkorange;
+            }
+            .bottom {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                background-color: darkgreen;
+            }
+            .bottom p {
+                margin: 0%;
+                color: white;
+            }
+
+            /* ▼▼メニューアイコン */
+            .menu-trigger,
+            .menu-trigger span {
+                display: inline-block;
+                transition: all .4s;
+                box-sizing: border-box;
+            }
+
+            .menu-trigger {
+                position: fixed;
+                /* ヘッダーの固定 */
+                top: 10px;
+                /* 位置(上0px) */
+                right: 5%;
+                /* 位置(右0px) */
+                width: 50px;
+                height: 44px;
+                z-index: 10;
+            }
+
+            .menu-trigger span {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: #fff;
+                border-radius: 4px;
+            }
+
+            .menu-trigger span:nth-of-type(1) {
+                top: 0;
+            }
+
+            .menu-trigger span:nth-of-type(2) {
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate3d(-50%, -50%, 0);
+                transform: translate3d(-50%, -50%, 0);
+            }
+
+            .menu-trigger span:nth-of-type(3) {
+                bottom: 0;
+            }
+
+
+            .menu-trigger.active span:nth-of-type(1) {
+                -webkit-transform: translateY(20px) rotate(-315deg) scale(.8);
+                transform: translateY(20px) rotate(-315deg) scale(.8);
+            }
+
+            .menu-trigger.active span:nth-of-type(2) {
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                border: 3px solid #fff;
+                border-radius: 50%;
+            }
+
+            .menu-trigger.active span:nth-of-type(3) {
+                -webkit-transform: translateY(-20px) rotate(315deg) scale(.8);
+                transform: translateY(-20px) rotate(315deg) scale(.8);
+            }
+
+            /* ▲▲メニューアイコン */
+            .menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 120%;
+                background: #2F2F2F;
+                opacity: 0.9;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                text-align: center;
+            }
+
+            .menu_contents {
+                color: white;
+                list-style: none;
+                padding: 0;
+                margin-top: 70px;
+            }
+
+            .links {
+                display: block;
+                color: white;
+                width: 100%;
+                font-size: 18px;
+                margin-bottom: 1em;
+                text-decoration: none;
+                z-index: 4;
+            }
+            .links:hover {
+                text-decoration: underline;
+                color: #FF822C;
+            }
+
+            .menu_t {
+                color: white;
+                font-size: 32px;
+                width: 100%;
+                margin-bottom: 0.25em;
+                border-bottom: solid 3px #FFF;
+            }
+
+            .main {
+                width: 90%;
+                height: 100%;
+                background-color: #5f5c5c;
+                color: #fff;
+                z-index: 1;
+                font-size: 16px;
+                margin: 5%;
+            }
+            .wrap {
+                overflow: hidden;
+            }
+
+
+
+
+
+
+            #pageTop {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+
+
+
+            #pageTop i {
+                padding-top: 6px
+            }
+
+
+
+            #pageTop a {
+                display: block;
+                z-index: 999;
+                padding: 8px 0 0 8px;
+                border-radius: 30px;
+                width: 35px;
+                height: 35px;
+                background-color: rgb(255, 44, 237);
+                color: #fff;
+                font-style: normal;
+                text-decoration: none;
+                text-align: left;
+                opacity: 0.6;
+            }
+
+
+
+            #pageTop a:hover {
+                background-color: rgb(243, 148, 235);
+                text-decoration: none;
+                opacity: 1;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <p>header</p>
+        <h1>this is test web page</h1>
+    </div>
+    <div class="main">
+        <pre id="preview"></pre>
+        <input type="file" id="getfile" accept="text/*">
+    </div>
+    <div class="footer">
+        <p>footer</p>
+        <h1>this is test web page</h1>
+    </div>
+
+    <div class="bottom">
+        <p>Gucci 2018(bottom)</p>
+    </div>
+    <script>
+        var file = document.querySelector('#getfile');
+
+        file.onchange = function () {
+            var fileList = file.files;
+            //読み込み
+            var reader = new FileReader();
+            reader.readAsText(fileList[0]);
+
+            //読み込み後
+            reader.onload = function () {
+                document.querySelector('#preview').textContent = reader.result;
+            };
+        };
+    </script>
+</body>
+
+</html>
