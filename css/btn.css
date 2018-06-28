@@ -96,3 +96,29 @@ a {
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+
+.btn04 {
+    padding: 0.5em 1em;
+    border: solid 1px rgb(50, 214, 0);
+    background-color: rgb(50, 214, 0);
+    color: black;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/* ボタンにカーソルを合わせたとき */
+
+.btn04:hover {
+    background-color: rgb(33, 141, 0);
+    border: solid 1px rgb(33, 141, 0);
+    color: black;
+    box-shadow: 0 0 20px rgb(230, 230, 230);
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
