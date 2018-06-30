@@ -9,42 +9,42 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 25%;
-    }
-    a {
-        text-decoration: none;
-    }
-    #bg{
-        /* 背景画像の透過用css */
+}
+a {
+    text-decoration: none;
+}
+#bg{
+    /* 背景画像の透過用css */
     height: 100%;
     background: rgba(255,255,255,0.75);
-    }
-    .css{
-font-size: 5rem;
-font-weight: bold;
-position: relative;
-top:30%;
-    }
-    .a{
-        color: rgb(73, 173, 219);
-    }
-    .lnk{
-        position: relative;
-top:30%;
-        margin: 0.5rem;
-    }
-    a{
-        color: black;
+}
+.css{
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+    top:30%;
+}
+.a{
+    color: rgb(73, 173, 219);
+}
+.lnk{
+    position: relative;
+    top:30%;
+    margin: 0.5rem;
+}
+a{
+    color: black;
 
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-    }
-    a:hover{
-        color: coral;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+a:hover{
+    color: coral;
 
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-    }
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
