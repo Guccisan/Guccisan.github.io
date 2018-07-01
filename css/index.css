@@ -2,7 +2,7 @@ html, body {
     height: 100%; 
     font-size: 1em;
     text-align:center;
-    font-family: sans-serif;
+    font-family: serif;
 }
 body {
     background-image: url(../img/css3.png);
@@ -53,6 +53,9 @@ top:30%;
 /* ウィンドウ幅が0〜479pxの場合に適用するCSS */
 @media screen and ( max-width:479px )
 {
+    *{
+        font-family: sans-serif;
+    }
     p{
         color: #f00 ;	/* 赤色 */
     }
