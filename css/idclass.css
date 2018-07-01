@@ -1,3 +1,8 @@
+html, body { 
+    position: relative;
+    height: 100%;
+    background-color: blueviolet;
+}
 *{
     font-family: sans-serif;
     font-size: 1.0em;
@@ -14,23 +19,37 @@ a {
     color: white;
     text-align: center;
 }
-#content{
-    background-color: black;
-    padding: 2% 0%;
-}
 .rs{
+    position: absolute;
+    right: 0%;
+    margin: 1% 1%;
+    width: calc((100% - 80%)/2 - 2%);
+}
+.th1{
+    margin: 0% 0% 10% 0%;
+    padding: 10%;
     background-color: skyblue;
-    padding: 1%;
-    margin: 0% 1%;
-    width: 6%;
-    float: right;
+    display: block;
+}
+.ls{
+    position: absolute;
+    left: 0%;
+    margin: 1% 1%;
+    width: calc((100% - 80%)/2 - 2%);
+}
+.th2{
+    margin: 0% 0% 10% 0%;
+    padding: 10%;
+    background-color: rgb(187, 255, 0);
+    display: block;
 }
 #main{
+    position: relative;
+    left:calc(8%);
     background-color: white;
     width: 80%;
-    margin: 0% 2%;
-    position: relative;
-    left:8%;
+    height: auto;
+    margin: 1% 2%;
 }
 #footer{
     background-color: teal;
@@ -46,4 +65,10 @@ a {
     font-size: 1.0em;
     color: white;
     text-align: center;
+}
+.bottom{
+    position: absolute;
+    width: 100%;
+    top:100%;
+    /* display: none; */
 }
