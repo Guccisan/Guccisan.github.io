@@ -48,3 +48,15 @@ a:hover{
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+
+/* ウィンドウ幅が0〜479pxの場合に適用するCSS */
+@media screen and ( max-width:479px )
+{
+    p{
+        color: #f00 ;	/* 赤色 */
+    }
+	a
+	{
+		color: #f00 ;	/* 赤色 */
+	}
+}
