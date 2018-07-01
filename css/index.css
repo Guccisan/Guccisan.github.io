@@ -2,6 +2,7 @@ html, body {
     height: 100%; 
     font-size: 1em;
     text-align:center;
+    font-family: sans-serif;
 }
 body {
     background-image: url(../img/css3.png);
