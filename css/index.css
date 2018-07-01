@@ -42,9 +42,7 @@ top:30%;
     }
     a:hover{
         color: coral;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -61,17 +59,3 @@ top:30%;
 		color: #f00 ;	/* 赤色 */
 	}
 }
-=======
-=======
-
->>>>>>> parent of 1ad7211... indent
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-<<<<<<< HEAD
-    }
->>>>>>> parent of 1ad7211... indent
-=======
-    }
->>>>>>> parent of 1ad7211... indent

@@ -1,6 +1,4 @@
 html, body { 
-    position: relative;
-    height: 100%;
     background-color: blueviolet;
 }
 *{
@@ -8,7 +6,7 @@ html, body {
     font-size: 1.0em;
 }
 a {
-    color: rgb(255, 145, 0);
+    text-decoration: none;
 }
 #header{
     background-color: crimson;
@@ -19,10 +17,14 @@ a {
     color: white;
     text-align: center;
 }
+#content{
+    background-color: black;
+    padding: 1% 0%;
+}
 .rs{
     position: absolute;
     right: 0%;
-    margin: 1% 1%;
+    margin: 0% 1%;
     width: calc((100% - 80%)/2 - 2%);
 }
 .th1{
@@ -34,7 +36,7 @@ a {
 .ls{
     position: absolute;
     left: 0%;
-    margin: 1% 1%;
+    margin: 0% 1%;
     width: calc((100% - 80%)/2 - 2%);
 }
 .th2{
@@ -44,12 +46,13 @@ a {
     display: block;
 }
 #main{
+    padding: 1%;
     position: relative;
     left:calc(8%);
     background-color: white;
-    width: 80%;
+    width: 78%;
     height: auto;
-    margin: 1% 2%;
+    margin: 0% 2%;
 }
 #footer{
     background-color: teal;
@@ -67,8 +70,28 @@ a {
     text-align: center;
 }
 .bottom{
-    position: absolute;
     width: 100%;
-    top:100%;
-    /* display: none; */
+    bottom: 0%;
+}
+
+.btn04 {
+    /* padding: 0.5em 1em; */
+    color: coral;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/* ボタンにカーソルを合わせたとき */
+
+.btn04:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(230, 230, 230);
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
