@@ -1,0 +1,127 @@
+body {
+    /* ロード時のanimation */
+    animation: fadeIn 1s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1s ease 0s 1 1; 
+    /* ロード時のanimation */
+
+    font-family: sans-serif;
+    text-decoration: none;
+    margin: 0%;
+}
+
+ol{
+    list-style: none;
+}
+
+/* ロード時のanimation */
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+/* ロード時のanimation */
+
+/* ▼▼メニューアイコン */
+.menu-trigger{
+    display:none;
+}
+/* ▲▲メニューアイコン */
+
+/* メニュー(PC) */
+#menu_pc{ 
+    width: 80%;
+    height:auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+}
+.menu_list_img{
+    white-space: nowrap;
+    float: left;
+    width: 10%;
+    display: table-cell;
+    vertical-align: middle;
+    padding:2% 5%;
+    background-color: rgb(224, 215, 250);
+}
+.menu_list{
+    /* white-space: nowrap; */
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    width: 20%;
+    height: 4%;
+    /* padding:2% 5%; */
+    background-color: antiquewhite;
+}
+.menu_list > a{
+    display: block;
+    padding: 10% 0;
+    text-decoration: none;
+    color: black;
+}
+/* メニュー(PC) */
+
+/* サイトマップの見出し */
+#sitemap_h{
+	font-size: 2.0em;
+	color: white;
+}
+/* サイトマップ */
+#sitemap{
+    margin-top: 2%;
+    position: relative;
+    padding-top: 3%;
+    padding-right: 0%;
+    padding-bottom: 3%;
+    padding-left: 0%;
+    background-color: #2F2F2F;
+}
+/* サイトマップのリンクの書式 */
+#sitemap_l{
+    font-size: 18px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+      text-decoration: none;
+      color: white;
+      transition: 0.5s;
+}
+#sitemap_l:hover {
+  color: orange;
+}
+
+/* サイトマップのリンク群 */
+#link{
+    margin-left: 10%;
+    margin-right: 5%;
+}
+/* フッター */
+#footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+
+    margin-top: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.d{
+    display: block;
+}
+.p{
+    display: none;
+}
+
+/* content */
+.content{
+    padding:0 10%;
+    margin-top:2%;
+}

@@ -1,27 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <title>CSS demo page</title>
-    <!-- ビューポートの設定 -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/reset-min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/icon.png">
+    <script type="text/javascript" src="./jquery/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/phone.css">
+
+    <!-- メニュー画面（スマホ用） -->
+    <script>
+        $(function () {
+            $('.menu').hide();//はじめはメニュー非表示
+            $('.menu-trigger').on('click', function () {
+                $(this).toggleClass('active');//メニューのアイコン変更
+                $('.menu').stop().fadeToggle(400);// 連打で暴走しないようにstop()も設定
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div id="bg">
-        <p class="css"><span class="a">CSS</span> demo page</p>
-        <p class="lnk">
-            <a href="demo/idclass.html">idとclass</a>
-        </p>
-        <p class="lnk">
-            <a href="demo/btn.html">応用編</a>
-        </p>
+    <!-- menu(スマホ) -->
+    <div class="menu_sumaho">
+        <a class="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p id="menubtn_name">MENU</p>
+        </a>
+        <nav class="menu">
+            <ul class="menu_contents">
+                <li>
+                    <p class="menu_t">Links</p>
+                    <a class="links" href="test/aaa.html">test</a>
+                    <a class="links" href="city/sendai.html">Sendai</a>
+                    <a class="links" href="city/nagoya.html">Nagoya</a>
+                    <p class="menu_t">Others</p>
+                    <a class="links" href="read.html">read</a>
+                    <a class="links" href="https://saruwakakun.com/">バッハ</a>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- menu(スマホ) -->
+    <div id="menu_pc">
+        <ol>
+            <li class="menu_list"><a href="#">第10回高専祭 饗宴</a></li>
+            <li class="menu_list"><a href="#">TOP</a></li>
+            <li class="menu_list"><a href="#">校内MAP</a></li>
+            <li class="menu_list"><a href="#">スケジュール</a></li>
+            <li class="menu_list"><a href="#">球技大会</a></li>
+        </ol>
     </div>
 
+<div class="content">
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+    <p>ji</p>
+</div>
 
+
+
+    <div id="sitemap">
+        <div id="link">
+            <a style="display: table;" id="sitemap_h">SITEMAP</a>
+            <a id="space">&emsp;</a>
+            <a id="sitemap_l" style="display: table;" href="home.html">ホーム</a>
+            <a id="sitemap_l" style="display: table;" href="kosensai_map.html">校内マップ</a>
+            <a id="sitemap_l" style="display: table;" href="#">高専祭スケジュール</a>
+            <a id="sitemap_l" style="display: table;" href="ballgame.html">球技大会</a>
+            <br>
+            <a id="sitemap_l" style="display: table;" href="http://www.kumamoto-nct.ac.jp/">熊本高専公式ホームページ</a>
+            <a id="sitemap_l" style="display: table;" href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p class="d">©2018 NIT,KumamotoCollege All Rights Reserved.</p>
+        <p class="p">©2018 NITK All Rights Reserved.</p>
+    </div>
 </body>
 
 </html>
