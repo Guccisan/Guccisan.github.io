@@ -144,4 +144,25 @@
         padding:0 5%;
         margin-top:2%;
     }
+    #top{
+        overflow: hidden;
+    }
+    #top p{
+        position: absolute;
+        color: rgb(0, 0, 0);/*文字は白に*/
+        top: 25%;
+        left: 5%;
+        font-size: 1.5em;
+    }
+    #top img{
+        width: 300%;
+    }
+    /* ページのタイトル（一番大きい見出し） */
+    .title1,.title2,.title3,.title4,.title5{
+        font-size: 1.5em;
+    }
+    /* サイトマップの見出し */
+    #sitemap_h{
+	    font-size: 1.5em;
+    }
 }

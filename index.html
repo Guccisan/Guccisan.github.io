@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>熊本高専 高専祭｜Be Foolish.</title>
+    <title>第10回 熊本高専 高専祭</title>
     <link rel="shortcut icon" href="img/icon.png">
     <script type="text/javascript" src="./jquery/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
@@ -22,75 +22,48 @@
             });
         });
     </script>
-    <!-- メニュー画面（スマホ用）のボタン設定 -->
+
+    <!-- スムーススクロール -->
+    <script>
+        $(function () {
+            // #で始まるリンクをクリックしたら実行されます
+            $('a[href^="#"]').click(function () {
+                // スクロールの速度
+                var speed = 400; // ミリ秒で記述
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <div id="top">
+            <img src="./img/hiyoko.jpg" />
+            <p>第10回 高専祭<br>2018.10.27(Sat)~28(Sun)</p>
+    </div>
     <!-- PCメニュー -->
-    <header id="luxbar" class="luxbar-static">
+    <header id="luxbar" class="luxbar-default">
         <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
         <div class="luxbar-menu luxbar-menu-left luxbar-menu-material-amber">
             <ul class="luxbar-navigation">
-                <li class="luxbar-header">
-                    <img src="./img/hiyoko.jpg" width="256" height="58" alt="top">
-                    <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox">
-                        <span></span>
-                    </label>
-                </li>
                 <li class="luxbar-item">
                     <a href="#">TOP</a>
                 </li>
                 <li class="luxbar-item">
                     <a href="#">校内MAP</a>
-                    <div class="content_hover">
-                        <ul class="hover_menu">
-                            <li class="hover-item">
-                                <a href="http://www.kumamoto-nct.ac.jp/">熊本高専HP</a>
-                            </li>
-                            <li class="hover-item">
-                                <a href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="luxbar-item">
                     <a href="#">スケジュール</a>
-                    <div class="content_hover">
-                        <ul class="hover_menu">
-                            <li class="hover-item">
-                                <a href="http://www.kumamoto-nct.ac.jp/">熊本高専HP</a>
-                            </li>
-                            <li class="hover-item">
-                                <a href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="luxbar-item">
                     <a href="#">球技大会</a>
-                    <div class="content_hover">
-                        <ul class="hover_menu">
-                            <li class="hover-item">
-                                <a href="http://www.kumamoto-nct.ac.jp/">熊本高専HP</a>
-                            </li>
-                            <li class="hover-item">
-                                <a href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="luxbar-item">
-                    <a href="#">Others</a>
-                    <div class="content_hover">
-                        <ul class="hover_menu">
-                            <li class="hover-item">
-                                <a href="http://www.kumamoto-nct.ac.jp/">熊本高専ホームページ</a>
-                            </li>
-                            <li class="hover-item">
-                                <a href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <a href="#sitemap">SITEMAP</a>
                 </li>
             </ul>
         </div>
@@ -274,7 +247,7 @@
     <div id="sitemap">
         <div id="link">
             <a style="display: table;" id="sitemap_h">SITEMAP</a>
-            <a class="sitemap_l" href="home.html">TOP</a>
+            <a class="sitemap_l" href="#">TOP</a>
             <a class="sitemap_l" href="kosensai_map.html">校内マップ</a>
             <a class="sitemap_l" href="#">スケジュール</a>
             <a class="sitemap_l" href="ballgame.html">球技大会</a>
@@ -289,7 +262,7 @@
 
     <!-- フッター -->
     <div id="footer">
-        <p class="arr_pc">©2018 NIT,Kumamoto College All Rights Reserved.</p>
+        <p class="arr_pc">©2018 NIT,Kumamoto College Yatsushiro Campus All Rights Reserved.</p>
         <p class="arr_phone">©2018 NITK All Rights Reserved.</p>
     </div>
     <!-- フッター -->
