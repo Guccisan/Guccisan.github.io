@@ -2,15 +2,10 @@ body {
     /* ロード時のanimation */
     animation: fadeIn 1s ease 0s 1 normal;
     -webkit-animation: fadeIn 1s ease 0s 1 1; 
-    /* ロード時のanimation */
 
     font-family: sans-serif;
     text-decoration: none;
     margin: 0%;
-}
-
-ol{
-    list-style: none;
 }
 
 /* ロード時のanimation */
@@ -22,97 +17,32 @@ ol{
     0% {opacity: 0}
     100% {opacity: 1}
 }
-/* ロード時のanimation */
-
-/* ▼▼メニューアイコン */
-.menu-trigger{
-    display:none;
-}
-/* ▲▲メニューアイコン */
-
-/* サイトマップの見出し */
-#sitemap_h{
-	font-size: 2.0em;
-	color: white;
-}
-/* サイトマップ */
-#sitemap{
-    margin-top: 2%;
-    position: relative;
-    padding: 3% 10%;
-    background-color: #2F2F2F;
-}
-/* サイトマップのリンクの書式 */
-.sitemap_l{
-    /* display: block; */
-    display: table;
-    font-size: 1em;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    text-decoration: none;
-    color: white;
-    transition: 0.5s;
-}
-.sitemap_l:hover {
-  color: orange;
-}
-
-/* サイトマップのリンク群 */
-#link{
-    width: 60%;
-}
-/* qrコード */
-#qr{
-    position: absolute;
-    right: 10%;
-    top:30%;
-}
-#qr{
-    display: none;
-}
-/* フッター */
-#footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #000;
-    background-color: orange;
-
-    margin-top: 0;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-}
-.d{
-    display: block;
-}
-.p{
-    display: none;
-}
-
-/* content */
-.content{
-    padding:0 10%;
-    margin-top:80px;
-}
 
 /* ページのタイトル（一番大きい見出し） */
 .title1{
-    /* font-family: sans-serif; */
-    /* background-image: url("../img/crayonline.png"); 
-    background-position:-30px 0px;
-    text-shadow: 3px 3px 1px rgb(117, 117, 117);
-    background-size: 130% 120%; */
-    /* border-bottom: solid 10px orange; */
-    /* font-weight: bold; */
-    /* text-decoration-line: underline;
-    text-decoration-color: orange;
-    margin: 10px 0; */
     background: linear-gradient(transparent 80%, orange 0%);
     font-size: 2.5em;
 }
 .title2{
     background: linear-gradient(transparent 80%, #E51638 0%);
+    font-size: 2.5em;
+}
+.title3{
+    background: linear-gradient(transparent 80%, #9000A3 0%);
+    font-size: 2.5em;
+}
+.title4{
+    background: linear-gradient(transparent 80%, #49A318 0%);
+    font-size: 2.5em;
+}
+.title5{
+    background: linear-gradient(transparent 80%, #52B9E9 0%);
+    font-size: 2.5em;
+}
+
+/* スマホメニューアイコン */
+.menu-trigger{
+    display:none;
 }
 
 /* PCメニュー関連 */
@@ -147,4 +77,74 @@ ol{
 }
 .hover-item  a:hover{
     text-decoration-line: underline;
+}
+
+/* サイトマップ */
+#sitemap{
+    margin-top: 2%;
+    position: relative;
+    padding: 3% 10%;
+    background-color: #2F2F2F;
+}
+
+/* サイトマップの見出し */
+#sitemap_h{
+	font-size: 2.0em;
+	color: white;
+}
+
+/* サイトマップのリンクの書式 */
+.sitemap_l{
+    /* display: block; */
+    display: table;
+    font-size: 1em;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+.sitemap_l:hover {
+  color: orange;
+}
+
+/* サイトマップのリンク群 */
+#link{
+    width: 60%;
+}
+
+/* qrコード */
+#qr{
+    position: absolute;
+    right: 10%;
+    top:30%;
+}
+#qr{
+    display: none;
+}
+
+/* フッター */
+#footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #000;
+    background-color: orange;
+
+    margin-top: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.arr_pc{
+    display: block;
+}
+.arr_phone{
+    display: none;
+}
+
+/* content */
+.content{
+    padding:0 10%;
+    margin-top:80px;
 }

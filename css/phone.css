@@ -1,34 +1,7 @@
 /* スマホ用 */
 @media screen and (max-width: 768px){
-    body {
-        /* ロード時のanimation */
-        animation: fadeIn 1s ease 0s 1 normal;
-        -webkit-animation: fadeIn 1s ease 0s 1 1; 
-        /* ロード時のanimation */
     
-        font-family: sans-serif;
-        text-decoration: none;
-        margin: 0%;
-
-        /* background-color: black; */
-    }
-    
-    ol{
-        list-style: none;
-    }
-    
-    /* ロード時のanimation */
-    @keyframes fadeIn {
-        0% {opacity: 0}
-        100% {opacity: 1}
-    }
-    @-webkit-keyframes fadeIn {
-        0% {opacity: 0}
-        100% {opacity: 1}
-    }
-    /* ロード時のanimation */
-    
-    /* ▼▼メニューアイコン */
+    /* スマホメニューアイコン */
     .menu-trigger,
     .menu-trigger span {
         display: inline-block;
@@ -101,9 +74,8 @@
         transform: translateY(-14px) rotate(315deg) scale(.8);
         background-color: rgb(255, 255, 255);
     }
-    /* ▲▲メニューアイコン */
     
-    /* ▼▼メニュー */
+    /* スマホメニュー */
     .menu {
         position: fixed;
         top: 0;
@@ -137,33 +109,34 @@
         margin-top: 1em;
         color: white;
     }
-    /* ▲▲メニュー */
     
-    /* メニュー(PC) */
+    /* PCメニュー */
     .luxbar-menu,.luxbar-menu-left,.luxbar-menu-material-amber{ 
         display: none;
     }
-    /* メニュー(PC) */
     
-/* サイトマップ */
-#sitemap{
-    margin-top: 2%;
-    position: relative;
-    padding: 3% 5%;
-    background-color: #2F2F2F;
-}
-/* サイトマップのリンク群 */
-#link{
-    width: 100%;
-}
-/* qrコード */
-#qr{
-display: none;
-}
-    .p{
+    /* サイトマップ */
+    #sitemap{
+        margin-top: 2%;
+        position: relative;
+        padding: 3% 5%;
+        background-color: #2F2F2F;
+    }
+
+    /* サイトマップのリンク群 */
+    #link{
+        width: 100%;
+    }
+
+    /* qrコード */
+    #qr{
+        display: none;
+    }
+    /* フッターのコピーライト */
+    .arr_phone{
         display: block;
     }
-    .d{
+    .arr_pc{
         display: none;
     }
     /* content */
