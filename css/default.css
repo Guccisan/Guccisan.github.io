@@ -44,7 +44,8 @@ ol{
 }
 /* サイトマップのリンクの書式 */
 .sitemap_l{
-    display: block;
+    /* display: block; */
+    display: table;
     font-size: 1em;
     margin-bottom: 1%;
     margin-top: 1%;
@@ -61,11 +62,11 @@ ol{
     width: 60%;
 }
 /* qrコード */
-/* #qr{
+#qr{
     position: absolute;
     right: 10%;
     top:30%;
-} */
+}
 #qr{
     display: none;
 }
@@ -96,8 +97,8 @@ ol{
 }
 
 /* ページのタイトル（一番大きい見出し） */
-.title{
-    font-family: sans-serif;
+.title1{
+    /* font-family: sans-serif; */
     /* background-image: url("../img/crayonline.png"); 
     background-position:-30px 0px;
     text-shadow: 3px 3px 1px rgb(117, 117, 117);
@@ -109,6 +110,9 @@ ol{
     margin: 10px 0; */
     background: linear-gradient(transparent 80%, orange 0%);
     font-size: 2.5em;
+}
+.title2{
+    background: linear-gradient(transparent 80%, #E51638 0%);
 }
 
 /* PCメニュー関連 */
@@ -143,7 +147,4 @@ ol{
 }
 .hover-item  a:hover{
     text-decoration-line: underline;
-}
-.title{
-    background: linear-gradient(transparent 80%, orange 0%);
 }
