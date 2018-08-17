@@ -146,7 +146,13 @@
     }
     /* メニュー(PC) */
     
-    /* サイトマップのリンク群 */
+/* サイトマップ */
+#sitemap{
+    margin-top: 2%;
+    position: relative;
+    padding: 3% 5%;
+    background-color: #2F2F2F;
+}
 /* サイトマップのリンク群 */
 #link{
     width: 100%;

@@ -74,7 +74,7 @@ ol{
     text-align: center;
     font-size: 0.9em;
     color: #000;
-    background-color: #ff6f00;
+    background-color: orange;
 
     margin-top: 0;
     padding-top: 0;
@@ -97,32 +97,49 @@ ol{
 
 /* ページのタイトル（一番大きい見出し） */
 .title{
-    font-family: "YuMincho", serif;
-    background-image: url("../img/crayonline.png"); 
+    font-family: sans-serif;
+    /* background-image: url("../img/crayonline.png"); 
     background-position:-30px 0px;
-    font-size: 2.5em;
     text-shadow: 3px 3px 1px rgb(117, 117, 117);
-    background-size: 130% 120%;
+    background-size: 130% 120%; */
+    /* border-bottom: solid 10px orange; */
+    /* font-weight: bold; */
+    text-decoration-line: underline;
+    text-decoration-color: orange;
+    font-size: 2.5em;
+    margin: 10px 0;
 }
 
 /* PCメニュー関連 */
 .luxbar-item:hover{
-color: #000;
-transition: 0.4s
+    color: #000;
+    transition: 0.4s
 }
-.luxbar-item:hover .others_hover{
+.luxbar-item:hover .content_hover{
     display: block;
     width: 300px;
-    height: 500px;
-    background-color: blue;
+    height: auto;
+    background-color: #FFF;
 }
-.others_hover{
+.content_hover{
     position: absolute;
     top: 100%;
 
     display: none;
 }
+.hover_menu{
+    list-style: none;
+}
 .hover-item{
-    display: table-cell;
-    background-color: aqua;
+    padding: 3px 5px 2px 5px;
+    margin: 0px 0px 2px 0px;
+    color: #000;
+    background-color: rgb(255, 228, 179);
+}
+.hover-item  a{
+    display: inline;
+    padding: 0;
+}
+.hover-item  a:hover{
+    text-decoration-line: underline;
 }
