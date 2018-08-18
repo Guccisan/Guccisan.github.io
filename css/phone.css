@@ -38,7 +38,6 @@
         font-size: 0.5em;
     }
     .menu-trigger {
-        transition: all 0.4s;
         position: fixed;
         /* ヘッダーの固定 */
         top: 10px;
