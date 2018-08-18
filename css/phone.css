@@ -26,7 +26,7 @@
     .menu-trigger,
     .menu-trigger span {
         display: inline-block;
-        transition: all .4s;
+        transition: all 0.4s;
         box-sizing: border-box;
     }
     #menubtn_name{
