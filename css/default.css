@@ -47,20 +47,22 @@ body {
 
 #top{
     position: relative;
-    background-image: url(hiyoko.jpg);/*背景画像*/
+    /* background-image: url(hiyoko.jpg);背景画像 */
+    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(hiyoko.jpg) center bottom / cover no-repeat;
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
     height:750px;/*div高さ*/
 }
 #top p{
     position: absolute;
-    color: rgb(0, 0, 0);/*文字は白に*/
+    color: rgb(255, 255, 255);/*文字は白に*/
+    -webkit-text-stroke: 1px #000;
     top: 50%;
-    left: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*文字ずれ調整*/
     text-align: center;
     font-size: 4em;
 
-    transform: translate(0,-50%);/*文字ずれ調整*/
     white-space: nowrap;
 }
 #top img{

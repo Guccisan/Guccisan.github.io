@@ -14,12 +14,13 @@
     #top p{
         position: absolute;
         color: rgb(0, 0, 0);/*文字は白に*/
-        top: 40%;
-        left: 3%;
-        font-size: 2em;
+        top: 45%;
+        /* left: 4%; */
+        transform: translate(-50%,-50%);/*文字ずれ調整*/
+        font-size: 1.5em;
         text-align: center;
     
-        transform: translate(0,-50%);/*文字ずれ調整*/
+        /* transform: translate(0,-50%);文字ずれ調整 */
         white-space: nowrap;
     }
 
