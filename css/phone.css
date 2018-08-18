@@ -31,7 +31,8 @@
     }
     #menubtn_name{
         position: fixed;
-        /* right: 10px; */
+        margin: 0;
+        right: 11px;
         top:40px;
         font-size: 0.5em;
     }
@@ -160,6 +161,7 @@
     /* フッターのコピーライト */
     .arr_phone{
         display: block;
+        margin: 0;
     }
     .arr_pc{
         display: none;
