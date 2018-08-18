@@ -3,7 +3,8 @@ body {
     animation: fadeIn 1s ease 0s 1 normal;
     -webkit-animation: fadeIn 1s ease 0s 1 1; 
 
-    font-family: "Yu Gothic UI","Meiryo UI",sans-serif;
+    /* フォントの指定 */
+    font-family:"游ゴシック Medium","Yu Gothic Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",Roboto,sans-serif;
     text-decoration: none;
     margin: 0%;
 }
