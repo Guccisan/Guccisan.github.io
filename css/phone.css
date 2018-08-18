@@ -4,14 +4,14 @@
         margin: 2% 0;
     }
     
-    #top{
+    .top{
         position: relative;
         background-image: url(hiyoko.jpg);/*背景画像*/
         background-attachment: unset;/*画面からの相対位置（背景固定）*/
         background-size: cover;/*背景サイズ調整*/
         height:680px;/*div高さ*/
     }
-    #top p{
+    .top p{
         position: absolute;
         color: rgb(0, 0, 0);/*文字は白に*/
         top: 35%;
@@ -21,6 +21,9 @@
         text-align: center;
     
         /* transform: translate(0,-50%);文字ずれ調整 */
+    }
+    .top img{
+        display: none;
     }
 
     /* スマホメニューアイコン */
@@ -180,5 +183,14 @@
     /* サイトマップの見出し */
     #sitemap_h{
 	    font-size: 1.5em;
+    }
+    .map p,.schedule p,.game p,.event p,.intro p{
+        font-size: 1.75em;
+    }
+    #twitter_phone{
+        display: inline;
+    }
+    #twitter-widget-0{
+        display: none;
     }
 }
