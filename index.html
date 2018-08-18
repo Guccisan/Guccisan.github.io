@@ -33,7 +33,7 @@
                 var href = $(this).attr("href");
                 var target = $(href == "#" || href == "" ? 'html' : href);
                 var position = target.offset().top;
-                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                $("body,html").animate({ scrollTop: position }, speed, "swing");
                 return false;
             });
         });
@@ -42,33 +42,36 @@
 
 <body>
     <div id="top">
-            <img src="./img/hiyoko.jpg" />
-            <p>第10回 高専祭<br>2018.10.27(Sat)~28(Sun)</p>
-    </div>
-    <!-- PCメニュー -->
-    <header id="luxbar" class="luxbar-default">
-        <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
-        <div class="luxbar-menu luxbar-menu-left luxbar-menu-material-amber">
-            <ul class="luxbar-navigation">
-                <li class="luxbar-item">
+        <!-- <img src="./img/hiyoko.jpg" /> -->
+        <p>第10回 高専祭
+            <br>2018.10.27(Sat)~28(Sun)</p>
+        <!-- PCメニュー -->
+        <nav class="pc_menu">
+            <ul>
+
+                <li class="current">
                     <a href="#">TOP</a>
                 </li>
-                <li class="luxbar-item">
-                    <a href="#">校内MAP</a>
+
+                <li>
+                    <a href="#">校内マップ</a>
                 </li>
-                <li class="luxbar-item">
+
+                <li>
                     <a href="#">スケジュール</a>
                 </li>
-                <li class="luxbar-item">
+
+                <li>
                     <a href="#">球技大会</a>
                 </li>
-                <li class="luxbar-item">
+
+                <li>
                     <a href="#sitemap">SITEMAP</a>
                 </li>
             </ul>
-        </div>
-    </header>
-    <!-- PCメニュー -->
+        </nav>
+        <!-- PCメニュー -->
+    </div>
 
     <!-- menu(スマホ) -->
     <div class="menu_sumaho">

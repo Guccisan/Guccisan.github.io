@@ -3,7 +3,7 @@ body {
     animation: fadeIn 1s ease 0s 1 normal;
     -webkit-animation: fadeIn 1s ease 0s 1 1; 
 
-    font-family: sans-serif;
+    font-family: "Yu Gothic UI","Meiryo UI",sans-serif;
     text-decoration: none;
     margin: 0%;
 }
@@ -47,44 +47,54 @@ body {
 
 #top{
     position: relative;
+    background-image: url(hiyoko.jpg);/*背景画像*/
+    background-attachment: fixed;/*画面からの相対位置（背景固定）*/
+    background-size: cover;/*背景サイズ調整*/
+    height:750px;/*div高さ*/
 }
 #top p{
     position: absolute;
     color: rgb(0, 0, 0);/*文字は白に*/
     top: 25%;
     left: 10%;
-    font-size: 2em;
+    font-size: 4em;
+
+    transform: translate(0,-50%);/*文字ずれ調整*/
+    white-space: nowrap;
 }
 #top img{
     width: 100%;
 }
 
 /* PCメニュー関連 */
-.luxbar-item:hover{
-    color: #FFF;
-    /* transition: 0.4s */
-}
-.luxbar-item:hover .content_hover{
-    display: block;
-    width: 300px;
-    height: auto;
-    background-color: #FFF;
-}
-.luxbar-menu-material-amber, .luxbar-menu-material-amber .dropdown ul {
-    background-color: #ffffff;
-    color: #ff6f00;
-}
-.luxbar-menu {
-    min-height: 58px;
-    transition: 0.6s ease;
+nav.pc_menu ul{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    display: table;
+    margin: 0 auto;
+    padding: 0 ;
     width: 80%;
-    padding-left: 10%;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.3);
 }
-.luxbar-default {
+nav.pc_menu li{
+    display: table-cell;
+    min-width: 50px;
+}
+nav.pc_menu a{
+    display: block;
     width: 100%;
-    position: static;
-    /* position: relative; */
-    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    text-decoration: none;
+    color: #555;
+    padding: 5px;
+}
+nav.pc_menu li.current{
+    border-bottom: 3px solid orange;
+}
+nav.pc_menu li:hover{
+    color: #E7DA66;
+    border-bottom: 3px solid #52B9E9;
 }
 
 /* サイトマップ */

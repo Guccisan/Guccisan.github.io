@@ -1,6 +1,27 @@
 /* スマホ用 */
 @media screen and (max-width: 768px){
+    p {
+        margin: 2% 0;
+    }
     
+    #top{
+        position: relative;
+        background-image: url(hiyoko.jpg);/*背景画像*/
+        background-attachment: fixed;/*画面からの相対位置（背景固定）*/
+        background-size: cover;/*背景サイズ調整*/
+        height:400px;/*div高さ*/
+    }
+    #top p{
+        position: absolute;
+        color: rgb(0, 0, 0);/*文字は白に*/
+        top: 25%;
+        left: 3%;
+        font-size: 4em;
+    
+        transform: translate(0,-50%);/*文字ずれ調整*/
+        white-space: nowrap;
+    }
+
     /* スマホメニューアイコン */
     .menu-trigger,
     .menu-trigger span {
@@ -10,7 +31,7 @@
     }
     #menubtn_name{
         position: fixed;
-        right: 10px;
+        /* right: 10px; */
         top:40px;
         font-size: 0.5em;
     }
@@ -111,13 +132,13 @@
     }
     
     /* PCメニュー */
-    .luxbar-menu,.luxbar-menu-left,.luxbar-menu-material-amber{ 
+    .pc_menu{ 
         display: none;
     }
     
     /* サイトマップ */
     #sitemap{
-        margin-top: 2%;
+        margin-top: 5%;
         position: relative;
         padding: 3% 5%;
         background-color: #2F2F2F;
@@ -126,6 +147,10 @@
     /* サイトマップのリンク群 */
     #link{
         width: 100%;
+    }
+    .sitemap_l{
+        margin-bottom: 3%;
+        margin-top: 3%;
     }
 
     /* qrコード */
