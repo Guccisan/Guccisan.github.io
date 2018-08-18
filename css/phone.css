@@ -14,7 +14,7 @@
     #top p{
         position: absolute;
         color: rgb(0, 0, 0);/*文字は白に*/
-        top: 45%;
+        top: 35%;
         /* left: 4%; */
         transform: translate(-50%,-50%);/*文字ずれ調整*/
         font-size: 1.25em;
