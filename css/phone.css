@@ -1,5 +1,10 @@
 /* スマホ用 */
 @media screen and (max-width: 768px){
+    body{
+        /* フォントの指定 */
+        font-family:Roboto,"游ゴシック Medium","Yu Gothic Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",sans-serif;
+    }
+
     p {
         margin: 2% 0;
     }
