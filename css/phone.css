@@ -27,13 +27,8 @@
     .menu-trigger,
     .menu-trigger span {
         display: inline-block;
-<<<<<<< HEAD
         transition: all 0.4s ease-in-out;
-        -webkit-transition: 0.8s ease-in-out;
-=======
-        transition: all 0.4s;
         -webkit-transition: 0.4s ease-in-out;
->>>>>>> parent of d686164... マイナーアップデート10
         box-sizing: border-box;
     }
     #menubtn_name{
