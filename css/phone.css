@@ -1,11 +1,5 @@
 /* スマホ用 */
 @media screen and (max-width: 768px){
-    body{
-        /* フォントの指定 */
-        font-family:Roboto,"游ゴシック Medium","Yu Gothic Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",sans-serif;
-        /* font-family: "Yu Gothic UI","Meiryo UI",sans-serif; */
-    }
-
     p {
         margin: 2% 0;
     }
@@ -40,7 +34,7 @@
     #menubtn_name{
         position: fixed;
         margin: 0;
-        right: 11px;
+        right: 13px;
         top:40px;
         font-size: 0.5em;
     }
