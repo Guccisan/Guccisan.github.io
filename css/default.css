@@ -181,7 +181,7 @@ nav.pc_menu li:hover{
 .map{
     position: relative;
     /* background-image: url(hiyoko.jpg);背景画像 */
-    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(hiyoko.jpg) center bottom / cover no-repeat;
+    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
     height:500px;/*div高さ*/
@@ -204,6 +204,9 @@ nav.pc_menu li:hover{
 
     white-space: nowrap;
 }
+.map img{
+    display: none;
+}
 .map a{
     position: absolute;
     color: rgba(255, 255, 255, 0);/*文字は白に*/
@@ -218,7 +221,7 @@ nav.pc_menu li:hover{
 .schedule{
     position: relative;
     /* background-image: url(hiyoko.jpg);背景画像 */
-    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(hiyoko.jpg) center bottom / cover no-repeat;
+    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
     height:500px;/*div高さ*/
@@ -251,11 +254,14 @@ nav.pc_menu li:hover{
     width: 100%;
     font-size: 0.01px;
 }
+.schedule img{
+    display: none;
+}
 
 .game{
     position: relative;
     /* background-image: url(hiyoko.jpg);背景画像 */
-    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(hiyoko.jpg) center bottom / cover no-repeat;
+    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
     height:500px;/*div高さ*/
@@ -288,11 +294,14 @@ nav.pc_menu li:hover{
     width: 100%;
     font-size: 0.01px;
 }
+.game img{
+    display: none;
+}
 
 .event{
     position: relative;
     /* background-image: url(hiyoko.jpg);背景画像 */
-    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(hiyoko.jpg) center bottom / cover no-repeat;
+    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
     height:500px;/*div高さ*/
@@ -325,11 +334,14 @@ nav.pc_menu li:hover{
     width: 100%;
     font-size: 0.01px;
 }
+.event img{
+    display: none;
+}
 
 .intro{
     position: relative;
     /* background-image: url(hiyoko.jpg);背景画像 */
-    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(hiyoko.jpg) center bottom / cover no-repeat;
+    background: linear-gradient(rgba(255, 165, 0, 0.4) 40%, rgba(255, 165, 0, 0.2) 70%, rgba(255, 165, 0, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
     height:500px;/*div高さ*/
@@ -361,6 +373,9 @@ nav.pc_menu li:hover{
     height: 100%;
     width: 100%;
     font-size: 0.01px;
+}
+.intro img{
+    display: none;
 }
 
 .osirase{

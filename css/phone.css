@@ -6,7 +6,7 @@
     
     .top{
         position: relative;
-        background-image: url(hiyoko.jpg);/*背景画像*/
+        background-image: url(../img/hiyoko.jpg);/*背景画像*/
         background-attachment: unset;/*画面からの相対位置（背景固定）*/
         background-size: cover;/*背景サイズ調整*/
         height:680px;/*div高さ*/
@@ -58,7 +58,8 @@
         right: 0px;
         width: 50px;
         height: 50px;
-        background-color: hsla(0, 0%, 100%, 0.7)
+        background-color: hsla(0, 0%, 100%, 0.7);
+        z-index: 1;
     }
     .menu-trigger span {
         position: absolute;
@@ -186,5 +187,10 @@
     }
     .map p,.schedule p,.game p,.event p,.intro p{
         font-size: 1.75em;
+    }
+    .map img,.schedule img,.game img,.event img,.intro img{
+        display: initial;
+        height: 500px;
+        width: 100%;
     }
 }
