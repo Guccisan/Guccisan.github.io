@@ -76,6 +76,131 @@ body {
     width: 100%;
 }
 
+.top_map{
+    position: relative;
+    /* background-image: url(hiyoko.jpg);背景画像 */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:500px;
+}
+.top_map p{
+    position: absolute;
+    color: rgb(255, 255, 255);/*文字は白に*/
+    -webkit-text-stroke: 1px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*文字ずれ調整*/
+    text-align: center;
+    font-size: 3vw;
+    font-family: "ふみゴシック",sans-serif;
+
+    white-space: nowrap;
+}
+.top_map img{
+    display: none;
+}
+
+.top_schedule{
+    position: relative;
+    /* background-image: url(hiyoko.jpg);背景画像 */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:500px;
+}
+.top_schedule p{
+    position: absolute;
+    color: rgb(255, 255, 255);/*文字は白に*/
+    -webkit-text-stroke: 1px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*文字ずれ調整*/
+    text-align: center;
+    font-size: 3vw;
+    font-family: "ふみゴシック",sans-serif;
+
+    white-space: nowrap;
+}
+.top_schedule img{
+    display: none;
+}
+
+.top_game{
+    position: relative;
+    /* background-image: url(hiyoko.jpg);背景画像 */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:500px;
+}
+.top_game p{
+    position: absolute;
+    color: rgb(255, 255, 255);/*文字は白に*/
+    -webkit-text-stroke: 1px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*文字ずれ調整*/
+    text-align: center;
+    font-size: 3vw;
+    font-family: "ふみゴシック",sans-serif;
+
+    white-space: nowrap;
+}
+.top_game img{
+    display: none;
+}
+
+.top_event{
+    position: relative;
+    /* background-image: url(hiyoko.jpg);背景画像 */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:500px;
+}
+.top_event p{
+    position: absolute;
+    color: rgb(255, 255, 255);/*文字は白に*/
+    -webkit-text-stroke: 1px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*文字ずれ調整*/
+    text-align: center;
+    font-size: 3vw;
+    font-family: "ふみゴシック",sans-serif;
+
+    white-space: nowrap;
+}
+.top_event img{
+    display: none;
+}
+
+.top_intro{
+    position: relative;
+    /* background-image: url(hiyoko.jpg);背景画像 */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url(../img/hiyoko.jpg) center bottom / cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:500px;
+}
+.top_intro p{
+    position: absolute;
+    color: rgb(255, 255, 255);/*文字は白に*/
+    -webkit-text-stroke: 1px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*文字ずれ調整*/
+    text-align: center;
+    font-size: 3vw;
+    font-family: "ふみゴシック",sans-serif;
+
+    white-space: nowrap;
+}
+.top_intro img{
+    display: none;
+}
+
 /* PCメニュー関連 */
 nav.pc_menu ul{
     position: absolute;
