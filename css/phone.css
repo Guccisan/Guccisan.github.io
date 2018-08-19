@@ -187,10 +187,4 @@
     .map p,.schedule p,.game p,.event p,.intro p{
         font-size: 1.75em;
     }
-    #twitter_phone{
-        display: inline;
-    }
-    #twitter-widget-0{
-        display: none;
-    }
 }
