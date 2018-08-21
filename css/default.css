@@ -68,9 +68,10 @@ body {
     transform: translate(-50%,-50%);/*文字ずれ調整*/
     text-align: center;
     font-size: 3vw;
-    font-family: "游ゴシック Bold","Yu Gothic Bold",sans-serif;
+    font-family: 'Poppins', sans-serif;
 
     white-space: nowrap;
+}
 }
 .top img{
     width: 100%;
