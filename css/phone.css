@@ -306,4 +306,16 @@
         height: 500px;
         width: 100%;
     }
+
+    #tw_phone{
+        display: block;
+    }
+
+    #tw_pc{
+        display: none;
+    }
+
+    .sitemap_l{
+        font-size: 1em;
+    }
 }
