@@ -214,7 +214,29 @@
     }
     
     /* スマホメニュー */
-    .menu {
+    @keyframes RightToLeft {
+        0% {
+            opacity: 0;/* 透明 */
+            transform: translateX(100%);/* X軸方向に50px */
+        }
+        100% {
+            opacity: 1;/* 不透明 */
+            transform: translateX(0);/* X軸方向に0px */
+        }
+    }
+    @keyframes LeftToRight {
+        0% {
+            opacity: 1;/* 透明 */
+            transform: translateX(0);/* X軸方向に50px */
+        }
+        100% {
+            opacity: 0;/* 不透明 */
+            transform: translateX(100%);/* X軸方向に0px */
+        }
+    }
+    .menu{
+        animation-name: LeftToRight;/* アニメーション名 */
+        animation-duration: 0.5s;/* アニメーション時間 */
         position: fixed;
         top: 0;
         right: 0;
@@ -226,6 +248,10 @@
         left: 0;
         z-index: 2;
         text-align: center;
+    }
+    .menu.active{
+        animation-name: RightToLeft;/* アニメーション名 */
+        animation-duration: 0.5s;/* アニメーション時間 */
     }
     .menu_contents {
         list-style: none;
