@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .container{
+                padding: 100px 0 15px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Table-Modal</title>
+    <style>
+        html,body{
+            width: 100%;
+        }
+        .close{
+            font-size: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+        }
+        .container{
+            max-width: 100%;
+            padding: 100px 5%;
+        }
+        .modal-dialog{
+            margin: 100px auto;
+        }
+        table {
+            border-collapse: collapse;
+            height: 500px;
+            width: 100%;
+        }
+        td:hover{
+            background-color: #97c0b4;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- メニュー画面 -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="../index.html">Gucci</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DEMOS<span class="caret"></span></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#buttons">Buttons</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item active" href="#">表_Modal<span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../fes/index.html">高専祭Web</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+    <!-- メニュー画面 -->
+
+
+
+    <div class="container">
+        <table border="1">
+            <tr>
+                <td colspan="3" data-toggle="modal" data-target="#modal-sample01">A1</td>
+                <td data-toggle="modal" data-target="#modal-sample02">D1</td>
+                <td>E1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+                <td>D2</td>
+                <td>E2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+                <td>D3</td>
+                <td rowspan="3" data-toggle="modal" data-target="#modal-sample03">E3</td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>B4</td>
+                <td>C4</td>
+                <td>D4</td>
+            </tr>
+            <tr>
+                <td>A5</td>
+                <td>B5</td>
+                <td>C5</td>
+                <td>D5</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+    <!-- 2.モーダルの配置 -->
+    <div class="modal fade" id="modal-sample01" tabindex="-1">
+        <div class="modal-dialog">
+            <!-- 3.モーダルのコンテンツ -->
+            <div class="modal-content">
+                <!-- 4.モーダルのヘッダ -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する01</h4>
+                </div>
+                <!-- 5.モーダルのボディ -->
+                <div class="modal-body">
+                    コンテンツの本文01
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-sample02" tabindex="-1">
+        <div class="modal-dialog">
+            <!-- 3.モーダルのコンテンツ -->
+            <div class="modal-content">
+                <!-- 4.モーダルのヘッダ -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する02</h4>
+                </div>
+                <!-- 5.モーダルのボディ -->
+                <div class="modal-body">
+                    コンテンツの本文02
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-sample03" tabindex="-1">
+        <div class="modal-dialog">
+            <!-- 3.モーダルのコンテンツ -->
+            <div class="modal-content">
+                <!-- 4.モーダルのヘッダ -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する03</h4>
+                </div>
+                <!-- 5.モーダルのボディ -->
+                <div class="modal-body">
+                    コンテンツの本文03
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
