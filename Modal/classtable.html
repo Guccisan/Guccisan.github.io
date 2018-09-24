@@ -20,6 +20,9 @@
         html,body{
             width: 100%;
         }
+        h1 , .h1{
+            font-size: 5vh;
+        }
         .close{
             font-size: 40px;
             position: absolute;
@@ -93,43 +96,80 @@
                 d = '0' + d;
             }
 
-            var msg = "現在時刻は、" + y + "年" + m + "月" + d + "日 (" + wNames[w] + ")" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
+            var msg = "現在時刻：" + y + "年" + m + "月" + d + "日 (" + wNames[w] + ")" + nowHour + ":" + nowMin + ":" + nowSec;
             document.getElementById("RealtimeClockArea2").innerHTML = msg;
 
-
-            switch (w % 7) {
-                case 5:
-                case 6:
-                case 0: //土曜日、日曜日
-                    document.getElementById('mon1').style.backgroundColor = '#ccffcc';
-                    document.getElementById('mon2').style.backgroundColor = '#ccffcc';
-                    document.getElementById('mon3').style.backgroundColor = '#ccffcc';
-                    document.getElementById('mon4').style.backgroundColor = '#ccffcc';
-                    break;
-                case 1: //月曜日
-                    document.getElementById('tue1').style.backgroundColor = '#ccffcc';
-                    document.getElementById('tue2').style.backgroundColor = '#ccffcc';
-                    document.getElementById('tue3').style.backgroundColor = '#ccffcc';
-                    document.getElementById('tue4').style.backgroundColor = '#ccffcc';
-                    break;
-                case 2: //火曜日
-                    document.getElementById('wed1').style.backgroundColor = '#ccffcc';
-                    document.getElementById('wed2').style.backgroundColor = '#ccffcc';
-                    document.getElementById('wed3').style.backgroundColor = '#ccffcc';
-                    document.getElementById('wed4').style.backgroundColor = '#ccffcc';
-                    break;
-                case 3: //水曜日
-                    document.getElementById('thu1').style.backgroundColor = '#ccffcc';
-                    document.getElementById('thu2').style.backgroundColor = '#ccffcc';
-                    document.getElementById('thu3').style.backgroundColor = '#ccffcc';
-                    document.getElementById('thu4').style.backgroundColor = '#ccffcc';
-                    break;
-                case 4: //木曜日
-                    document.getElementById('fri1').style.backgroundColor = '#ccffcc';
-                    document.getElementById('fri2').style.backgroundColor = '#ccffcc';
-                    document.getElementById('fri3').style.backgroundColor = '#ccffcc';
-                    break;
+            if (nowHour >= 17) { //17:00以降は次の日の時間割を表示
+                switch (w % 7) {
+                    case 5:
+                    case 6:
+                    case 0: //金曜日、土曜日、日曜日
+                        document.getElementById('mon1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 1: //月曜日
+                        document.getElementById('tue1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 2: //火曜日
+                        document.getElementById('wed1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 3: //水曜日
+                        document.getElementById('thu1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 4: //木曜日
+                        document.getElementById('fri1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri3').style.backgroundColor = '#ccffcc';
+                        break;
+                }
             }
+            else {
+                switch (w % 7) {
+                    case 6:
+                    case 0:
+                    case 1: //土曜日、日曜日、月曜日
+                        document.getElementById('mon1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 2: //火曜日
+                        document.getElementById('tue1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 3: //水曜日
+                        document.getElementById('wed1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 4: //木曜日
+                        document.getElementById('thu1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 5: //金曜日
+                        document.getElementById('fri1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri3').style.backgroundColor = '#ccffcc';
+                        break;
+                }
+            }
+
         }
         setInterval('showClock2()', 1000);
     </script>
