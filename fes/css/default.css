@@ -9,6 +9,19 @@ body {
     margin: 0%;
 }
 
+/* twitter用 */
+#twi_pc {
+    display: block;
+    width: 40%;
+    height: calc(92%);
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+#twi_phone {
+    display: none;
+}
+
 /* ロード時のanimation */
 @keyframes fadeIn {
     0% {opacity: 0}
