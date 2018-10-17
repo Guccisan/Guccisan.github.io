@@ -6,41 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第10回 熊本高専 高専祭</title>
     <link rel="shortcut icon" href="img/icon.png">
+
     <script type="text/javascript" src="./jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./js/menu_btn.js"></script>
+    <script type="text/javascript" src="./js/scroll.js"></script>
+    <script type="text/javascript" src="./js/loading.js"></script>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/phone.css">
-
-    <!-- メニュー画面（スマホ用）のボタン設定 -->
-    <script>
-        $(function () {
-            $('.menu').hide();//はじめはメニュー非表示
-            $('.menu-trigger').on('click', function () {
-                $(this).toggleClass('active');//メニューのアイコン変更
-                $('.menu').stop().fadeToggle(400);// 連打で暴走しないようにstop()も設定
-                $('.menu').toggleClass('active');//メニューのアイコン変更
-            });
-        });
-    </script>
-
-    <!-- スムーススクロール -->
-    <script>
-        $(function () {
-            // #で始まるリンクをクリックしたら実行されます
-            $('a[href^="#"]').click(function () {
-                // スクロールの速度
-                var speed = 400; // ミリ秒で記述
-                var href = $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top;
-                $("body,html").animate({ scrollTop: position }, speed, "swing");
-                return false;
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/loading.css">
 </head>
 
 <body>
+    <div id="loading"></div>
+    <div id="fade"></div>
+
+
     <div class="top">
         <img src="./img/hiyoko.jpg"/>
         <p>10th Kosen Fes
