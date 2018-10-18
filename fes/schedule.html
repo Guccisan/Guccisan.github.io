@@ -9,10 +9,14 @@
 
     <script type="text/javascript" src="./jquery/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="./js/menu_btn.js"></script>
+    <script type="text/javascript" src="js/lity.js"></script>
     <script type="text/javascript" src="./js/scroll.js"></script>
     <script type="text/javascript" src="./js/loading.js"></script>
-    <script type="text/javascript" src="js/lity.js"></script>
+    <!-- <script type="text/javascript" src="js/lity.js"></script> -->
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/phone.css">
@@ -92,6 +96,117 @@
     <div class="content">
         <h1 class="title3">準備中</h1>
         <img src="./img/kanban_jyunbi.png" data-lity height="300" width="300" />
+
+
+        <!-- 表！ -->
+        <table border="1" cellspacing="1">
+            <tr>
+                <td colspan="3">
+                    <a data-toggle="modal" data-target="#modal-sample01" href="a">A1</a>
+                </td>
+                <td>
+                    <a data-toggle="modal" data-target="#modal-sample02" href="a">D1</a>
+                </td>
+                <td>E1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+                <td>D2</td>
+                <td>E2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+                <td>D3</td>
+                <td rowspan="3">
+                    <a data-toggle="modal" data-target="#modal-sample03" href="a">E3</a>
+                </td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>B4</td>
+                <td>C4</td>
+                <td>D4</td>
+            </tr>
+            <tr>
+                <td>A5</td>
+                <td>B5</td>
+                <td>C5</td>
+                <td>D5</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <!-- 2.モーダルの配置 -->
+        <div class="modal fade" id="modal-sample01" tabindex="-1">
+            <div class="modal-dialog">
+                <!-- 3.モーダルのコンテンツ -->
+                <div class="modal-content">
+                    <!-- 4.モーダルのヘッダ -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する01</h4>
+                        <img src="./img/kanban_jyunbi.png" data-lity height="100" width="100" />
+                    </div>
+                    <!-- 5.モーダルのボディ -->
+                    <div class="modal-body">
+                        コンテンツの本文01
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-sample02" tabindex="-1">
+            <div class="modal-dialog">
+                <!-- 3.モーダルのコンテンツ -->
+                <div class="modal-content">
+                    <!-- 4.モーダルのヘッダ -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する02</h4>
+                        <img src="./img/kanban_jyunbi.png" data-lity height="100" width="100" />
+                    </div>
+                    <!-- 5.モーダルのボディ -->
+                    <div class="modal-body">
+                        コンテンツの本文02
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-sample03" tabindex="-1">
+            <div class="modal-dialog">
+                <!-- 3.モーダルのコンテンツ -->
+                <div class="modal-content">
+                    <!-- 4.モーダルのヘッダ -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する03</h4>
+                        <img src="./img/kanban_jyunbi.png" data-lity height="100" width="100" />
+                    </div>
+                    <!-- 5.モーダルのボディ -->
+                    <div class="modal-body">
+                        コンテンツの本文03
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2.モーダルの配置 -->
+
+
 
         <div id="twi_phone">
             <h1 class="title1">学生会Twitter</h1>
