@@ -37,27 +37,27 @@ body {
 .title1{
     background: linear-gradient(transparent 95%, orange 0%);
     font-size: 2.5em;
-    margin-bottom: 2%;
+    margin: 2% 0;
 }
 .title2{
     background: linear-gradient(transparent 95%, #E51638 0%);
     font-size: 2.5em;
-    margin-bottom: 2%;
+    margin-bottom: 2% 0;
 }
 .title3{
     background: linear-gradient(transparent 95%, #9000A3 0%);
     font-size: 2.5em;
-    margin-bottom: 2%;
+    margin-bottom: 2% 0;
 }
 .title4{
     background: linear-gradient(transparent 95%, #49A318 0%);
     font-size: 2.5em;
-    margin-bottom: 2%;
+    margin-bottom: 2% 0;
 }
 .title5{
     background: linear-gradient(transparent 95%, #52B9E9 0%);
     font-size: 2.5em;
-    margin-bottom: 2%;
+    margin-bottom: 2% 0;
 }
 
 .top{
@@ -233,7 +233,6 @@ body {
     margin-top: 1%;
     text-decoration: none;
     color: white;
-    transition: 0.5s;
 }
 .sitemap_l:hover {
   color: orange;
