@@ -7,6 +7,7 @@ body {
     font-family:"游ゴシック Medium","Yu Gothic Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",sans-serif;
     text-decoration: none;
     margin: 0%;
+    text-align: justify;
 }
 
 /* twitter用 */
@@ -488,6 +489,9 @@ body {
     margin-top: 1px;
     margin-right: 1px;
 }/* --- 新着リスト --- */
+.update{
+    background-color: rgb(50, 80, 150);
+}
 .osirase h3{
     text-align: center;
 }
