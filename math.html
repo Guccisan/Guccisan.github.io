@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .container{
+                padding: 100px 0 15px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <title>bootstrapTEST</title>
+    <style>
+        html,body{
+            width: 100%;
+        }
+        .container{
+            width: 100%;
+            overflow: hidden;
+            max-width: 100%;
+            padding: 100px 5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- メニュー画面 -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Gucci</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DEMO<span class="caret"></span></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Modal/classtable.html">時間割</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="Modal/modal.html">表_Modal</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="fes/index.html">高専祭Web</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item active" href="#">formulae</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- メニュー画面 -->
+
+
+
+    <div class="container">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>HTMLに数式を入れる</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="bs-docs-section">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(1)分数</h4>
+                    <math>
+                        <mfrac>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mn>3</mn>
+                        </mfrac>
+                        <mo>+</mo>
+                        <mfrac>
+                            <mn>2</mn>
+                            <mn>7</mn>
+                        </mfrac>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(2)一次方程式</h4>
+                    <math>
+                        <mi>x</mi>
+                        <mo>-</mo>
+                        <mn>2</mn>
+                        <mo>=</mo>
+                        <mn>3</mn>
+                        <mo>&#x2062;
+                            <!--INVISIBLE TIMES-->
+                        </mo>
+                        <mi>x</mi>
+                        <mo>+</mo>
+                        <mn>4</mn>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(3)連立方程式</h4>
+                    <math>
+                        <mo>{</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd>
+                                    <mi>x</mi>
+                                    <mo>+</mo>
+                                    <mi>y</mi>
+                                    <mo>=</mo>
+                                    <mn>6</mn>
+                                </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd>
+                                    <mn>3</mn>
+                                    <mo>&#x2062;
+                                        <!--INVISIBLE TIMES-->
+                                    </mo>
+                                    <mi>x</mi>
+                                    <mo>+</mo>
+                                    <mi>y</mi>
+                                    <mo>=</mo>
+                                    <mn>2</mn>
+                                </mtd>
+                            </mtr>
+                        </mtable>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(4)累乗（2乗、3乗）、上付き添字</h4>
+                    <math>
+                        <mn>5</mn>
+                        <mo>&#x2062;
+                            <!--INVISIBLE TIMES-->
+                        </mo>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>3</mn>
+                        </msup>
+                        <mo>+</mo>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(5)二次関数・三次関数 / 二次方程式・三次方程式</h4>
+                    <math>
+                        <mi>y</mi>
+                        <mo>=</mo>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>3</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <mn>4</mn>
+                        <mo>&#x2062;
+                            <!--INVISIBLE TIMES-->
+                        </mo>
+                        <mi>x</mi>
+                        <mo>+</mo>
+                        <mn>1</mn>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(6)<msup> の応用例</h4>
+                    <p> &lt;math&gt; とグループ化タグ &lt;mrow&gt; を合わせて使う応用例</p>
+                    <math>
+                        <msup>
+                            <mi>e</mi>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(7)添字（下付き添字）</h4>
+                    <p>添字を表示するには &lt;msub&gt; タグを使います。</p>
+                    <math>
+                        <msub>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                        </msub>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(8)対数・対数関数</h4>
+                    <p>対数・対数関数は &lt;msub&gt; タグで表示できます。</p>
+                    <math>
+                        <mi>y</mi>
+                        <mo>=</mo>
+                        <msub>
+                            <mi>log</mi>
+                            <mi>a</mi>
+                        </msub>
+                        <mo>&#x2061;
+                            <!--FUNCTION APPLICATION-->
+                        </mo>
+                        <mi>x</mi>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(9)添字（上下添字）</h4>
+                    <p>上下に添字を表示するには &lt;msubsup&gt; タグを使います。</p>
+                    <math>
+                        <msubsup>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                            <mi>j</mi>
+                        </msubsup>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(10)平方根・ルート</h4>
+                    <p>平方根（ルート）を表示するには &lt;msqrt&gt; タグを使います。</p>
+                    <math>
+                        <msqrt>
+                            <mi>x</mi>
+                            <mo>+</mo>
+                            <mn>1</mn>
+                        </msqrt>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(11)立方根（三乗根）</h4>
+                    <p>立方根（三乗根）を表示するには &lt;mroot&gt; タグを使います。</p>
+                    <math>
+                        <mroot>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mn>3</mn>
+                        </mroot>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(12)複素数・虚数</h4>
+                    <math>
+                        <mn>3</mn>
+                        <mo>+</mo>
+                        <mi>i</mi>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(13)シグマ（数列の和）</h4>
+                    <math>
+                        <munderover>
+                            <mi>&sum;</mi>
+                            <mrow>
+                                <mi>k</mi>
+                                <mo>=</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mi>n</mi>
+                        </munderover>
+                        <mrow>
+                            <mi>f</mi>
+                            <mo>&#x2061;
+                                <!--FUNCTION APPLICATION-->
+                            </mo>
+                            <mfenced>
+                                <mi>x</mi>
+                            </mfenced>
+                        </mrow>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(14)三角関数（sin / cos / tan）</h4>
+                    <p>sin x / cos x / tan x は特別なタグは不要で <mi> で表示できます。ただし、下記ソースコードのように sin と x は別々に囲みます。</p>
+
+                    <math>
+                        <mi>sin</mi>
+                        <mo>&#x2061;
+                            <!--FUNCTION APPLICATION-->
+                        </mo>
+                        <mi>x</mi>
+                    </math>
+                    <br>
+                    <math>
+                        <mi>tan</mi>
+                        <mo>&#x2061;
+                            <!--FUNCTION APPLICATION-->
+                        </mo>
+                        <mi>&theta;</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mi>b</mi>
+                            <mi>c</mi>
+                        </mfrac>
+                    </math>
+                    <br>
+                    <math>
+                        <mi>cos</mi>
+                        <mo>&#x2061;
+                            <!--FUNCTION APPLICATION-->
+                        </mo>
+                        <msup>
+                            <mn>60</mn>
+                            <mo>&#x2218;
+                                <!--RING OPERATOR-->
+                            </mo>
+                        </msup>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(15)微分</h4>
+                    <math>
+                        <mfrac>
+                            <mrow>
+                                <mi>d</mi>
+                                <mi>x</mi>
+                            </mrow>
+                            <mrow>
+                                <mi>d</mi>
+                                <mi>t</mi>
+                            </mrow>
+                        </mfrac>
+                    </math>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>(16)積分</h4>
+                    <div>
+                        <math>
+                            <msubsup>
+                                <mo>&Integral;</mo>
+                                <mn>0</mn>
+                                <mn>1</mn>
+                            </msubsup>
+                            <mi>x</mi>
+                            <mrow>
+                                <mi>d</mi>
+                                <mi>x</mi>
+                            </mrow>
+                        </math>
+                        <br>
+                        <math>
+                            <msubsup>
+                                <mo>&#x222b;
+                                    <!--INTEGRAL-->
+                                </mo>
+                                <mn>0</mn>
+                                <mi>&#x221e;
+                                    <!--INFINITY-->
+                                </mi>
+                            </msubsup>
+                            <mfrac>
+                                <mrow>
+                                    <mi>d</mi>
+                                    <mi>x</mi>
+                                </mrow>
+                                <mi>x</mi>
+                            </mfrac>
+                        </math>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
