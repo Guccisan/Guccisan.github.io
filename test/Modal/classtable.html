@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .container{
+                padding: 100px 0 15px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>bootstrapTEST</title>
+    <style>
+        html,body{
+            width: 100%;
+        }
+        h1 , .h1{
+            font-size: 30px;
+        }
+        .close{
+            font-size: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+        }
+        .container{
+            max-width: 100%;
+            padding: 100px 5%;
+        }
+        .modal-dialog{
+            margin: 100px auto;
+        }
+        table {
+            border-collapse: collapse;
+            border-color: grey;
+            width: 100%;
+        }
+        .sub:hover{
+            background-color: #97c0b4;
+        }
+        table td{
+            height: 95px;
+            font-size: 1.05rem;
+            text-align: center;
+            vertical-align:middle;
+            overflow: hidden;
+            position: relative;
+        }
+        table td a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+        }
+        .youbi{
+            height: 30px;
+        }
+    </style>
+    <script>
+        function set2fig(num) {
+            // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+            var ret;
+            if (num < 10) { ret = "0" + num; }
+            else { ret = num; }
+            return ret;
+        }
+        function showClock2() {
+            // Date オブジェクトを作成
+            var date = new Date();
+
+            var nowTime = new Date();
+            var nowHour = set2fig(nowTime.getHours());
+            var nowMin = set2fig(nowTime.getMinutes());
+            var nowSec = set2fig(nowTime.getSeconds());
+
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDate();
+            var w = date.getDay();
+            var wNames = ['日', '月', '火', '水', '木', '金', '土'];
+
+            if (m < 10) {
+                m = '0' + m;
+            }
+            if (d < 10) {
+                d = '0' + d;
+            }
+
+            var msg = "現在時刻：" + y + "年" + m + "月" + d + "日 (" + wNames[w] + ")" + nowHour + ":" + nowMin + ":" + nowSec;
+            document.getElementById("RealtimeClockArea2").innerHTML = msg;
+
+            if (nowHour >= 17) { //17:00以降は次の日の時間割を表示
+                switch (w % 7) {
+                    case 5:
+                    case 6:
+                    case 0: //金曜日、土曜日、日曜日
+                        document.getElementById('mon1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 1: //月曜日
+                        document.getElementById('tue1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 2: //火曜日
+                        document.getElementById('wed1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 3: //水曜日
+                        document.getElementById('thu1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 4: //木曜日
+                        document.getElementById('fri1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri3').style.backgroundColor = '#ccffcc';
+                        break;
+                }
+            }
+            else {
+                switch (w % 7) {
+                    case 6:
+                    case 0:
+                    case 1: //土曜日、日曜日、月曜日
+                        document.getElementById('mon1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('mon4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 2: //火曜日
+                        document.getElementById('tue1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('tue4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 3: //水曜日
+                        document.getElementById('wed1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('wed4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 4: //木曜日
+                        document.getElementById('thu1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu3').style.backgroundColor = '#ccffcc';
+                        document.getElementById('thu4').style.backgroundColor = '#ccffcc';
+                        break;
+                    case 5: //金曜日
+                        document.getElementById('fri1').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri2').style.backgroundColor = '#ccffcc';
+                        document.getElementById('fri3').style.backgroundColor = '#ccffcc';
+                        break;
+                }
+            }
+
+        }
+        setInterval('showClock2()', 1000);
+    </script>
+
+</head>
+
+<body>
+    <!-- メニュー画面 -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="../index.html">Gucci</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DEMO<span class="caret"></span><span
+                            class="sr-only">(current)</span></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item active" href="#">時間割</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="modal.html">表_Modal</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../fes/index.html">高専祭Web</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- メニュー画面 -->
+
+
+
+    <div class="container">
+        <h1>4年 時間割(後期)</h1>
+        <p id="RealtimeClockArea2">※ここに時計(2桁固定版)が表示されます。</p>
+
+        <table border="1">
+            <tr>
+                <td class="youbi"></td>
+                <td class="youbi">月</td>
+                <td class="youbi">火</td>
+                <td class="youbi">水</td>
+                <td class="youbi">木</td>
+                <td class="youbi">金</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="sub" id="mon1">材料力学</td>
+                <td class="sub" id="tue1">行列式と行列の応用</td>
+                <td class="sub" id="wed1">流体力学</td>
+                <td class="sub" id="thu1">応用物理</td>
+                <td class="sub" id="fri1">情報処理Ⅱ</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="sub" id="mon2">科学技術と現代社会</td>
+                <td class="sub" id="tue2">応用数学</td>
+                <td class="sub" id="wed2">計測工学</td>
+                <td class="sub" id="thu2">機械設計製図Ⅱ</td>
+                <td class="sub" id="fri2">英語ⅣB</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="sub" id="mon3">電気磁気学</td>
+                <td class="sub" id="tue3"></td>
+                <td class="sub" id="wed3">総合実習Ⅱ</td>
+                <td class="sub" id="thu3">機械力学</td>
+                <td rowspan="2" class="sub" id="fri3">総合実習Ⅱ</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="sub" id="mon4"></td>
+                <td class="sub" id="tue4">HR</td>
+                <td class="sub" id="wed4"></td>
+                <td class="sub" id="thu4">熱力学</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>

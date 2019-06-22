@@ -1,0 +1,26 @@
+#loading {
+    position: fixed;
+    top: calc((100% - 60px)/2);
+    left: calc((100% - 60px)/2);
+
+	width: 60px;
+	height: 60px;
+	border: 5px solid #FF7A89;
+	border-top-color: #ffffff;
+	border-radius: 50%;
+    animation: spin 1.2s linear 0s infinite;
+    z-index: 32;
+}
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+#fade {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 16;
+}
