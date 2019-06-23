@@ -1,3 +1,8 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 /* PC画面ではメニューを表示しない */
 @media screen and (min-width : 769px) {
@@ -6,19 +11,8 @@
 
 /* スマホ画面ではメニューを表示 */
 @media screen and (max-width : 768px) {
-body{
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-p{
-  display: block;
-  margin: 0;
-  padding: 0;
-  word-wrap: break-word;
-}
+/* メニュー画面 */
 .menu_nav{padding-top:0px;}
-
 nav.globalMenuSp {
   position: fixed;
   z-index: 2;
@@ -32,16 +26,13 @@ nav.globalMenuSp {
   width: 100%;
   overflow-y: auto;
 }
-
 nav.globalMenuSp ul {
   background: rgb(1, 119, 255);
   margin: 0 auto;
   padding: 0;
   width: 100%;
 }
-
 nav.globalMenuSp ul li {border: none;}
-
 nav.globalMenuSp ul li p{
   background: rgb(104, 111, 119);
   display: block;
@@ -52,8 +43,10 @@ nav.globalMenuSp ul li p{
   margin: 0;
   padding: 0.75em 0;
   border-bottom:1px solid rgb(255, 0, 242);
-}
 
+  font-family:'Noto Sans Japanese';
+  font-weight: 900;
+}
 nav.globalMenuSp ul li a {
   display: block;
   font-size: 1em;
@@ -63,6 +56,8 @@ nav.globalMenuSp ul li a {
   padding: 0.75em 0;
   border-bottom:1px solid rgb(255, 0, 242);
 }
+
+
 
 /* トグルボタン関係のデザイン */
 #menuToggle {
