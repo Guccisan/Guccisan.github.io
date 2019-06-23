@@ -43,9 +43,6 @@ nav.globalMenuSp ul li p{
   margin: 0;
   padding: 0.75em 0;
   border-bottom:1px solid rgb(255, 0, 242);
-
-  font-family:'Noto Sans Japanese';
-  font-weight: 900;
 }
 nav.globalMenuSp ul li a {
   display: block;
