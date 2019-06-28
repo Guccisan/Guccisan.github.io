@@ -1,0 +1,1 @@
+$('pre#content').load('sample.txt');
