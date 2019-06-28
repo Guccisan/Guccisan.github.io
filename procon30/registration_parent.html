@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./eric_reset.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .form-title {
+            text-align: center;
+        }
+
+        .form-register {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Registration123</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-register card card-body">
+            <h3 class="form-title" style="margin-bottom: 2rem!important;">新規登録/保護者</h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="InputLastname">姓</label>
+                        <input type="lastname" class="form-control" id="InputLastname" placeholder="姓">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="InputFirstname">名</label>
+                        <input type="firstname" class="form-control" id="InputFirstname" placeholder="名">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="InputEmailaddress">メールアドレス</label>
+                        <input type="email" class="form-control" id="InputEmailaddress" placeholder="メールアドレス">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="Password">パスワード</label>
+                        <input type="password" class="form-control" id="Password" placeholder="パスワード">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="PasswordConfirm">パスワードの確認</label>
+                        <input type="password" class="form-control" id="PasswordConfirm" placeholder="パスワードの確認">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="InputBuzzerID">防犯ブザー識別番号</label>
+                        <input type="text" class="form-control" id="InputBuzzerID" placeholder="防犯ブザー識別番号">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='./index.html'">戻る</button>
+                </div>
+                <div class="col-lg-6">
+                    <button type="button" class="btn btn-warning btn-lg btn-block">新規登録</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
