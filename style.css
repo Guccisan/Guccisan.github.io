@@ -22,7 +22,9 @@ nav.globalMenuSp {
   right: 0;
   text-align: center;
   transform: translateY(-100%);
-  transition: all 0.4s;
+  transition: ease 0.6s;
+  -moz-transition: ease 0.6s; /* Firefox 4 */
+  -webkit-transition: ease 0.6s; /* Safari and Chrome */
   width: 100%;
   overflow-y: auto;
 }
@@ -98,6 +100,9 @@ nav.globalMenuSp.active {
 /* 1番目のspanを-45度に */
 #menuToggle.active span:nth-child(1){
   top: 18px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -106,6 +111,9 @@ nav.globalMenuSp.active {
 #menuToggle.active span:nth-child(2),
 #menuToggle.active span:nth-child(3) {
   top: 18px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
