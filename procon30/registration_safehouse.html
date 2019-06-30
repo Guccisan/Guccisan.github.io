@@ -32,6 +32,23 @@
             margin: auto;
         }
 
+        .has-error .form-control {
+            border-color: #a94442;
+        }
+
+        .has-error .help-block,
+        .has-error .control-label,
+        .has-error .radio,
+        .has-error .checkbox,
+        .has-error .radio-inline,
+        .has-error .checkbox-inline,
+        .has-error.radio label,
+        .has-error.checkbox label,
+        .has-error.radio-inline label,
+        .has-error.checkbox-inline label {
+            color: #a94442;
+        }
+
         /* スマホ縦画面用 */
         @media screen and (max-width: 768px) {
 
@@ -94,9 +111,11 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="form-group">
-                        <label for="PasswordConfirm">パスワードの確認</label>
-                        <input type="password" class="form-control" id="PasswordConfirm" placeholder="パスワードの確認">
+                    <div class="form-group has-feedback">
+                        <label for="PasswordConfirm" class="control-label">パスワードの確認</label>
+                        <input type="password" class="form-control" id="PasswordConfirm" placeholder="パスワードの確認"
+                            data-match="#Password" data-match-error="パスワードが一致しません" required>
+                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
             </div>
@@ -104,7 +123,8 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="InputPostalCode">郵便番号(7桁)</label>
-                        <input type="text" name="zip11" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');" class="form-control" id="PostalCode" placeholder="郵便番号(7桁)">
+                        <input type="text" name="zip11" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');"
+                            class="form-control" id="PostalCode" placeholder="郵便番号(7桁)">
                     </div>
                 </div>
             </div>
