@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap4用css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- ローディング用css-->
+    <link rel="stylesheet" href="./loading.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- bootstrap用js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- ローディング用js -->
+    <script type="text/javascript" src="./loading.js"></script>
+    <title>bootstrap</title>
+
+    <style>
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .my-box {
+            background-color: #e4e4e4;
+            border: 1px solid #bbb;
+            padding: 1px 4px;
+            text-align: center;
+        }
+
+        .row {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .main {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        .a {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* この一行を追加するだけ！ */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ロード画面 -->
+    <div id="loader-wrapper">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <header>
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="py-2" href="#" style="color: white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="d-block mx-auto">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar"
+                    aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">リンク</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../">index.html</a>
+                                <a class="dropdown-item" href="../procon30/">procon30</a>
+                                <a class="dropdown-item" href="#">リンク3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- ジャンボトロン -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>ナビゲーションバーの実例</h1>
+                <p>ナビゲーションバーのメニュー部分のみがサイトの本体の両端と揃います。</p>
+                <a class="btn btn-primary" href="../components/navbar/" target="_blank" rel="noopener"
+                    role="button">ナビゲーションバーの解説へ &raquo;</a>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="container main">
+            <h1>bootstrapのグリッドシステム</h1>
+            <p class="d-block d-md-none">モバイル用(2*4)</p>
+            <p class="d-none d-md-block">PC用(4*2)</p>
+            <div class="row">
+
+                <div class="col-6 col-lg-3 my-box">A</div>
+                <div class="col-6 col-lg-3 my-box">B</div>
+                <div class="col-6 col-lg-3 my-box">C</div>
+                <div class="col-6 col-lg-3 my-box">D</div>
+                <div class="col-6 col-lg-3 my-box">E</div>
+                <div class="col-6 col-lg-3 my-box">F</div>
+                <div class="col-6 col-lg-3 my-box">G</div>
+                <div class="col-6 col-lg-3 my-box">H</div>
+            </div>
+            <div class="a"></div>
+            <h1>bootstrapのグリッドシステム(画像)</h1>
+            <p class="d-block d-md-none">モバイル用(1*2)</p>
+            <p class="d-none d-md-block">PC用(2*1)</p>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <img src="./img2-min.jpg" class="figure-img img-fluid rounded ig1" alt="一般的な角丸イメージ1">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img src="./img4-min.jpg" class="figure-img img-fluid rounded ig2" alt="一般的な角丸イメージ2">
+                </div>
+            </div>
+
+
+
+            <!-- 切り替えボタンの設定 -->
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+                data-target="#exampleModalCenter">
+                垂直方向に中央揃えのモーダル
+            </button>
+
+            <!-- モーダルの設定 -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">モーダルのタイトル</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>モーダルのコンテンツ文。</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-primary">変更を保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-muted bg-dark">
+        <div class="container">
+            <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a
+                    href="../../getting-started/">getting started guide</a>.</p>
+        </div>
+    </footer>
+
+    <!-- navbarの下マージン -->
+    <script type="text/javascript">
+        $(window).on('load resize', function(){
+            var ig1 = $('.ig1');
+            console.log('ig1：' + ig1.height() + '×' + ig1.width());
+            $(".ig2").css("height" , ig1.height());
+
+            var n = $('.navbar');
+            console.log('コンテンツ本体：' + n.innerHeight() + '×' + n.width());
+            $(".jumbotron").css("margin-top" , n.innerHeight());
+        });
+    </script>
+</body>
+
+</html>
