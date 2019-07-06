@@ -147,13 +147,17 @@
             <div class="a"></div>
             <h1>bootstrapのグリッドシステム(画像)</h1>
             <p class="d-block d-md-none">モバイル用(1*2)</p>
-            <p class="d-none d-md-block">PC用(2*1)</p>
-            <div class="row">
-                <div class="col-12 col-lg-6 aa">
-                    <img src="../img2.jpg" class="figure-img img-fluid rounded ig1" alt="一般的な角丸イメージ1">
+            <p class="d-none d-md-block d-lg-none">PC画面用(2*1)</p>
+            <p class="d-none d-lg-block">PC全画面用(3*1)</p>
+            <div class="row a">
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <a href='../img.jpg'><img src='../img_640x480.jpg' alt='img' class='img-thumbnail'></a>
                 </div>
-                <div class="col-12 col-lg-6 ab">
-                    <img src="../img4.jpg" class="figure-img img-fluid rounded ig2" alt="一般的な角丸イメージ2">
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <a href='../img2.jpg'><img src='../img2_640x480.jpg' alt='img2' class='img-thumbnail'></a>
+                </div>
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <a href='../img4.jpg'><img src='../img4_640x480.jpg' alt='img4' class='img-thumbnail'></a>
                 </div>
             </div>
 
@@ -199,14 +203,14 @@
 
     <!-- navbarの下マージン -->
     <script type="text/javascript">
-        $(window).on('load resize', function(){
+        $(window).on('load resize', function () {
             var ig1 = $('.ig1');
             console.log('ig1：' + ig1.height() + '×' + ig1.width());
-            $(".ig2").css("height" , ig1.height());
+            $(".ig2").css("height", ig1.height());
 
             var n = $('.navbar');
             console.log('コンテンツ本体：' + n.innerHeight() + '×' + n.width());
-            $(".jumbotron").css("margin-top" , n.innerHeight());
+            $(".jumbotron").css("margin-top", n.innerHeight());
         });
     </script>
 </body>
