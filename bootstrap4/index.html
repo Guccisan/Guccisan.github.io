@@ -57,6 +57,24 @@
             object-fit: cover;
             /* この一行を追加するだけ！ */
         }
+
+        .modal-dialog-scrollable {
+            display: -ms-flexbox;
+            display: flex;
+            max-height: calc(100% - 1rem);
+        }
+
+        .modal-dialog-scrollable .modal-body {
+            overflow-y: auto;
+        }
+
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 500px;
+                margin: 1.75rem auto;
+                max-height: calc(100% - 3.5rem);
+            }
+        }
     </style>
 </head>
 
@@ -167,7 +185,8 @@
 
 
             <!-- 切り替えボタンの設定 -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+                data-target="#exampleModalScrollable">
                 ココを押すと表示
             </button>
 
