@@ -5,12 +5,12 @@ body{
 }
 
 /* PC画面ではメニューを表示しない */
-@media screen and (min-width : 769px) {
+/* @media screen and (min-width : 769px) { */
   /* #menuToggle,.globalMenuSp {display: none;} */
-}
+/* } */
 
 /* スマホ画面ではメニューを表示 */
-@media screen and (max-width : 768px) {
+/* @media screen and (max-width : 768px) { */
 /* メニュー画面 */
 .menu_nav{padding-top:0px;}
 nav.globalMenuSp {
@@ -118,4 +118,4 @@ nav.globalMenuSp.active {
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-}
+/* } */
