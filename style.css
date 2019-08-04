@@ -6,7 +6,7 @@ body{
 
 /* PC画面ではメニューを表示しない */
 @media screen and (min-width : 769px) {
-  #menuToggle,.globalMenuSp {display: none;}
+  /* #menuToggle,.globalMenuSp {display: none;} */
 }
 
 /* スマホ画面ではメニューを表示 */
