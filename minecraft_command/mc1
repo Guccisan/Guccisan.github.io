@@ -1,0 +1,150 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>サンプル</title>
+    <!-- bootstrap4用css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- ローディング用css-->
+    <link rel="stylesheet" href="../bootstrap4/loading.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- bootstrap用js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- ローディング用js -->
+    <script type="text/javascript" src="./loading.js"></script>
+    <script>
+        function setValue(idname) {
+            //テキストボックスオブジェクトを取得する
+            var obj = document.getElementById(idname);
+            //valueに値をセットする
+            obj.value = "hogehoge";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form name="frame">
+            <h2>入力項目</h2>
+            <table border="0" width="100%" class="table">
+                <tr>
+                    <td style="vertical-align: middle;">対象プレーヤー</td>
+                    <td><input type="text" name="select1" value="@p" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>ペスカトーレ</td>
+                    <td>エビとあさりの漁師風パスタ</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="container">
+        <form name="frame">
+            <strong>＜入力＞</strong><br>
+            <div class="row">
+                <div class="col-lg-6">対象プレーヤー</div>
+                <div class="col-lg-6"><input type="text" name="select1" size="15" value="@p" style="width:300px;"></div>
+            </div>
+            <p>対象プレーヤー<input type="text" name="select1" size="15" value="@p" style="width:300px;"></p>
+            <p>アイテム<select size="1" name="select2"></p>
+            <option value="minecraft:golden_sword">金の剣</option>
+            <option value="minecraft:wooden_sword">木の剣</option>
+            <option value="minecraft:stone_sword">石の剣</option>
+            <option value="minecraft:iron_sword">鉄の剣</option>
+            <option value="minecraft:diamond_sword">ダイヤモンドの剣</option>
+            <option value="minecraft:golden_axe">金の斧</option>
+            <option value="minecraft:wooden_axe">木の斧</option>
+            <option value="minecraft:stone_axe">石の斧</option>
+            <option value="minecraft:iron_axe">鉄の斧</option>
+            <option value="minecraft:diamond_axe">ダイヤモンドの斧</option>
+            <option value="minecraft:golden_pickaxe">金のツルハシ</option>
+            <option value="minecraft:wooden_pickaxe">木のツルハシ</option>
+            <option value="minecraft:stone_pickaxe">石のツルハシ</option>
+            <option value="minecraft:iron_pickaxe">鉄のツルハシ</option>
+            <option value="minecraft:diamond_pickaxe">ダイヤモンドのツルハシ</option>
+            <option value="minecraft:golden_shovel">金のシャベル</option>
+            <option value="minecraft:wooden_shovel">木のシャベル</option>
+            <option value="minecraft:stone_shovel">石のシャベル</option>
+            <option value="minecraft:iron_shovel">鉄のシャベル</option>
+            <option value="minecraft:diamond_shovel">ダイヤモンドのシャベル</option>
+            <option value="minecraft:golden_hoe">金のクワ</option>
+            <option value="minecraft:wooden_hoe">木のクワ</option>
+            <option value="minecraft:stone_hoe">石のクワ</option>
+            <option value="minecraft:iron_hoe">鉄のクワ</option>
+            <option value="minecraft:diamond_hoe">ダイヤモンドのクワ</option>
+            <option value="minecraft:bow">弓</option>
+            <option value="minecraft:golden_helmet">金のヘルメット</option>
+            <option value="minecraft:leather_helmet">革の帽子</option>
+            <option value="minecraft:chainmail_helmet">チェーンヘルメット</option>
+            <option value="minecraft:iron_helmet">鉄のヘルメット</option>
+            <option value="minecraft:diamond_helmet">ダイヤのヘルメット</option>
+            <option value="minecraft:golden_chestplate">金のチェストプレート</option>
+            <option value="minecraft:leather_chestplate">革の上着</option>
+            <option value="minecraft:chainmail_chestplate">チェーンチェストプレート</option>
+            <option value="minecraft:iron_chestplate">鉄のチェストプレート</option>
+            <option value="minecraft:diamond_chestplate">ダイヤのチェストプレート</option>
+            <option value="minecraft:golden_leggings">金のレギンス</option>
+            <option value="minecraft:leather_leggings">革のズボン</option>
+            <option value="minecraft:chainmail_leggings">チェーンレギンス</option>
+            <option value="minecraft:iron_leggings">鉄のレギンス</option>
+            <option value="minecraft:diamond_leggings">ダイヤのレギンス</option>
+            <option value="minecraft:golden_boots">金のブーツ</option>
+            <option value="minecraft:leather_boots">革のブーツ</option>
+            <option value="minecraft:chainmail_boots">チェーンブーツ</option>
+            <option value="minecraft:iron_boots">鉄のブーツ</option>
+            <option value="minecraft:diamond_boots">ダイヤのブーツ</option>
+            <option value="minecraft:shield">盾</option>
+            <option value="minecraft:fishing_rod">釣り竿</option>
+            <option value="minecraft:shears">ハサミ</option>
+            </select><br>
+            エンチャント効果：<select size="1" name="select3">
+                <option value="0">0:ダメージ軽減</option>
+                <option value="1">1:火炎耐性</option>
+                <option value="2">2:落下耐性</option>
+                <option value="3">3:爆発耐性</option>
+                <option value="4">4:飛び道具耐性</option>
+                <option value="5">5:水中呼吸</option>
+                <option value="6">6:水中採掘</option>
+                <option value="7">7:棘の鎧</option>
+                <option value="8">8:水中歩行</option>
+                <option value="9">9:氷渡り</option>
+                <option value="10">10:束縛の呪い</option>
+                <option value="16">16:ダメージ増加</option>
+                <option value="17">17:アンデット特効</option>
+                <option value="18">18:虫特効</option>
+                <option value="19">19:ノックバック</option>
+                <option value="20">20:火属性</option>
+                <option value="21">21:ドロップ増加</option>
+                <option value="22">22:範囲ダメージ増加</option>
+                <option value="32">32:効率強化</option>
+                <option value="33">33:シルクタッチ</option>
+                <option value="34">34:耐久力</option>
+                <option value="35">35:幸運</option>
+                <option value="48">48:射撃ダメージ増加</option>
+                <option value="49">49:パンチ</option>
+                <option value="50">50:フレイム</option>
+                <option value="51">51:無限</option>
+                <option value="61">61:宝釣り</option>
+                <option value="62">62:入れ食い</option>
+                <option value="70">70:修繕</option>
+                <option value="71">71:消滅の呪い</option>
+            </select><br>
+            エンチャントレベル：<input type="text" name="select4" size="15" value="1" style="width:300px;">
+            <p></p>
+            <hr>
+            <strong>＜出力＞</strong><br>
+            <input type="button" name="buttoncalc" onclick="CalEnchanting()" value="コマンド生成"><br>
+            <input type="text" name="result" size="1" value=""><br>
+        </form>
+    </div>
+
+
+    <input type="text" id="txt2" value="hoge">
+    <input type="button" value="ボタン" onclick="setValue('txt2');">
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap4用css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- ローディング用css-->
+    <link rel="stylesheet" href="../bootstrap4/loading.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- bootstrap用js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- ローディング用js -->
+    <script type="text/javascript" src="../bootstrap4/loading.js"></script>
+    <!-- navbarの下マージン -->
+    <script type="text/javascript">
+        $(window).on('load resize', function () {
+            var ig1 = $('.ig1');
+            console.log('ig1：' + ig1.height() + '×' + ig1.width());
+            $(".ig2").css("height", ig1.height());
+
+            var n = $('.navbar');
+            console.log('コンテンツ本体：' + n.innerHeight() + '×' + n.width());
+            $(".jumbotron").css("margin-top", n.innerHeight());
+        });
+    </script>
+    <script>
+        function Generate() {
+            var form = document.forms.frame;
+            var name = "{";
+            var ench = " ";
+            if (form.name.value.length > 0) {
+                name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]},";
+            }
+            if (form.enchantment_effect.value.length > 0) {
+                ench = "ench:[{id:" + form.enchantment_effect.value + ",lvl:" + form.enchantment_level.value + "}]}";
+            }
+            //アラート
+            // alert("コマンド生成しました。");
+            //テキストボックスオブジェクトを取得する
+            var obj = document.getElementById("output");
+            //valueに値をセットする
+            // obj.value = "/give" + ; display:{Name:"\"g78\"",Lore:["jioio"]}
+            obj.value = "give " + form.who.value + " " + form.item.value + " " + form.quantity.value + " 0 " + name + ench;
+        }
+    </script>
+    <title>bootstrap</title>
+
+    <style>
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .my-box {
+            background-color: #e4e4e4;
+            border: 1px solid #bbb;
+            padding: 1px 4px;
+            text-align: center;
+        }
+
+        .row {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .main {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        .a {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* この一行を追加するだけ！ */
+        }
+
+        .modal-dialog-scrollable {
+            display: -ms-flexbox;
+            display: flex;
+            max-height: calc(100% - 1rem);
+        }
+
+        .modal-dialog-scrollable .modal-body {
+            overflow-y: auto;
+        }
+
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 500px;
+                margin: 1.75rem auto;
+                max-height: calc(100% - 3.5rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ロード画面 -->
+    <div id="loader-wrapper">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <header>
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="py-2" href="#" style="color: white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="d-block mx-auto">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar"
+                    aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">リンク</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../">index.html</a>
+                                <a class="dropdown-item" href="../procon30/">procon30</a>
+                                <a class="dropdown-item" href="#">リンク3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- ジャンボトロン -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h4 class="d-block d-md-none">マインクラフトコマンドジェネレーター</h4>
+                <h1 class="d-none d-md-block">マインクラフトコマンドジェネレーター</h1>
+                <p>JAVA版ver1.11.2以前のバージョンで動作確認</p>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="container main">
+            <form name="frame">
+                <h2>入力項目</h2>
+                <table border="0" width="100%" class="table">
+                    <tr>
+                        <td style="vertical-align: middle;">対象プレーヤー</td>
+                        <td><input type="text" name="who" value="@p" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">アイテム</td>
+                        <td><select class="form-control" name="item">
+                                <option value="minecraft:golden_sword">金の剣</option>
+                                <option value="minecraft:wooden_sword">木の剣</option>
+                                <option value="minecraft:stone_sword">石の剣</option>
+                                <option value="minecraft:iron_sword">鉄の剣</option>
+                                <option value="minecraft:diamond_sword">ダイヤモンドの剣</option>
+                                <option value="minecraft:golden_axe">金の斧</option>
+                                <option value="minecraft:wooden_axe">木の斧</option>
+                                <option value="minecraft:stone_axe">石の斧</option>
+                                <option value="minecraft:iron_axe">鉄の斧</option>
+                                <option value="minecraft:diamond_axe">ダイヤモンドの斧</option>
+                                <option value="minecraft:golden_pickaxe">金のツルハシ</option>
+                                <option value="minecraft:wooden_pickaxe">木のツルハシ</option>
+                                <option value="minecraft:stone_pickaxe">石のツルハシ</option>
+                                <option value="minecraft:iron_pickaxe">鉄のツルハシ</option>
+                                <option value="minecraft:diamond_pickaxe">ダイヤモンドのツルハシ</option>
+                                <option value="minecraft:golden_shovel">金のシャベル</option>
+                                <option value="minecraft:wooden_shovel">木のシャベル</option>
+                                <option value="minecraft:stone_shovel">石のシャベル</option>
+                                <option value="minecraft:iron_shovel">鉄のシャベル</option>
+                                <option value="minecraft:diamond_shovel">ダイヤモンドのシャベル</option>
+                                <option value="minecraft:golden_hoe">金のクワ</option>
+                                <option value="minecraft:wooden_hoe">木のクワ</option>
+                                <option value="minecraft:stone_hoe">石のクワ</option>
+                                <option value="minecraft:iron_hoe">鉄のクワ</option>
+                                <option value="minecraft:diamond_hoe">ダイヤモンドのクワ</option>
+                                <option value="minecraft:bow">弓</option>
+                                <option value="minecraft:golden_helmet">金のヘルメット</option>
+                                <option value="minecraft:leather_helmet">革の帽子</option>
+                                <option value="minecraft:chainmail_helmet">チェーンヘルメット</option>
+                                <option value="minecraft:iron_helmet">鉄のヘルメット</option>
+                                <option value="minecraft:diamond_helmet">ダイヤのヘルメット</option>
+                                <option value="minecraft:golden_chestplate">金のチェストプレート</option>
+                                <option value="minecraft:leather_chestplate">革の上着</option>
+                                <option value="minecraft:chainmail_chestplate">チェーンチェストプレート</option>
+                                <option value="minecraft:iron_chestplate">鉄のチェストプレート</option>
+                                <option value="minecraft:diamond_chestplate">ダイヤのチェストプレート</option>
+                                <option value="minecraft:golden_leggings">金のレギンス</option>
+                                <option value="minecraft:leather_leggings">革のズボン</option>
+                                <option value="minecraft:chainmail_leggings">チェーンレギンス</option>
+                                <option value="minecraft:iron_leggings">鉄のレギンス</option>
+                                <option value="minecraft:diamond_leggings">ダイヤのレギンス</option>
+                                <option value="minecraft:golden_boots">金のブーツ</option>
+                                <option value="minecraft:leather_boots">革のブーツ</option>
+                                <option value="minecraft:chainmail_boots">チェーンブーツ</option>
+                                <option value="minecraft:iron_boots">鉄のブーツ</option>
+                                <option value="minecraft:diamond_boots">ダイヤのブーツ</option>
+                                <option value="minecraft:shield">盾</option>
+                                <option value="minecraft:fishing_rod">釣り竿</option>
+                                <option value="minecraft:shears">ハサミ</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">個数</td>
+                        <td><input type="text" name="quantity" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">名前</td>
+                        <td><input type="text" name="name" value="えぐいうんち" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">説明</td>
+                        <td><input type="text" name="description" value="うんち" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">エンチャント効果</td>
+                        <td><select class="form-control" name="enchantment_effect">
+                                <option value="0">0:ダメージ軽減</option>
+                                <option value="1">1:火炎耐性</option>
+                                <option value="2">2:落下耐性</option>
+                                <option value="3">3:爆発耐性</option>
+                                <option value="4">4:飛び道具耐性</option>
+                                <option value="5">5:水中呼吸</option>
+                                <option value="6">6:水中採掘</option>
+                                <option value="7">7:棘の鎧</option>
+                                <option value="8">8:水中歩行</option>
+                                <option value="9">9:氷渡り</option>
+                                <option value="10">10:束縛の呪い</option>
+                                <option value="16">16:ダメージ増加</option>
+                                <option value="17">17:アンデット特効</option>
+                                <option value="18">18:虫特効</option>
+                                <option value="19">19:ノックバック</option>
+                                <option value="20">20:火属性</option>
+                                <option value="21">21:ドロップ増加</option>
+                                <option value="22">22:範囲ダメージ増加</option>
+                                <option value="32">32:効率強化</option>
+                                <option value="33">33:シルクタッチ</option>
+                                <option value="34">34:耐久力</option>
+                                <option value="35">35:幸運</option>
+                                <option value="48">48:射撃ダメージ増加</option>
+                                <option value="49">49:パンチ</option>
+                                <option value="50">50:フレイム</option>
+                                <option value="51">51:無限</option>
+                                <option value="61">61:宝釣り</option>
+                                <option value="62">62:入れ食い</option>
+                                <option value="70">70:修繕</option>
+                                <option value="71">71:消滅の呪い</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">エンチャントレベル</td>
+                        <td><input type="text" name="enchantment_level" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><input class="btn btn-primary" type="button" name="generate"
+                                onclick="Generate()" value="コマンド生成">
+                            <input class="btn btn-secondary" type="button" name="copy" onclick="copyToClipboard()"
+                                value="コピー"></td>
+                        <td><input type="text" name="output" value="" class="form-control" id="output">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+
+    <footer class="text-muted bg-dark">
+        <div class="container">
+            <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a
+                    href="../../getting-started/">getting started guide</a>.</p>
+        </div>
+    </footer>
+    <!-- bodyタグ内の下部に以下を入力する -->
+    <script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("output");
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+            // コピーをお知らせする
+            alert("クリップボードにコピーしました。");
+        }
+    </script>
+</body>
+
+</html>
