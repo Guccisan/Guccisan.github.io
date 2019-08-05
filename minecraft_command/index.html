@@ -38,24 +38,12 @@
             if (form.name.value.length > 0) {
                 name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]},";
             }
-            else if ((form.name.value.length > 0) && (form.enchantment_level2.value.length == 0)){
+            else if ((form.name.value.length > 0) && (form.enchantment_level2.value.length == 0)) {
                 name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]}}";
             }
-            if (form.enchantment_level1.value.length > 0) {
-                ench = "ench:[{id:" + form.enchantment_effect1.value + ",lvl:" + form.enchantment_level1.value + "}]}";
-            }
-            if (form.enchantment_level2.value.length > 0) {
-                ench = "ench:[{id:" + form.enchantment_effect.value + ",lvl:" + form.enchantment_level.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "}]}";
-            }
-            if (form.enchantment_level3.value.length > 0) {
-                ench = "ench:[{id:" + form.enchantment_effect.value + ",lvl:" + form.enchantment_level.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "},{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "}]}";
-            }
-            if (form.enchantment_level4.value.length > 0) {
-                ench = "ench:[{id:" + form.enchantment_effect.value + ",lvl:" + form.enchantment_level.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "},{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "},{id:" + form.enchantment_effect4.value + ",lvl:" + form.enchantment_level4.value + "}]}";
-            }
-            if (form.enchantment_level5.value.length > 0) {
-                ench = "ench:[{id:" + form.enchantment_effect.value + ",lvl:" + form.enchantment_level.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "},{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "},{id:" + form.enchantment_effect4.value + ",lvl:" + form.enchantment_level4.value + "},{id:" + form.enchantment_effect5.value + ",lvl:" + form.enchantment_level5.value + "}]}";
-            }
+
+            ench = "ench:[{id:" + form.enchantment_effect1.value + ",lvl:" + form.enchantment_level1.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "},{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "},{id:" + form.enchantment_effect4.value + ",lvl:" + form.enchantment_level4.value + "},{id:" + form.enchantment_effect5.value + ",lvl:" + form.enchantment_level5.value + "}]}";
+
             //アラート
             // alert("コマンド生成しました。");
             //テキストボックスオブジェクトを取得する
@@ -195,7 +183,7 @@
         <!-- メインコンテンツ -->
         <div class="container main">
             <div class="alert alert-danger" role="alert"><strong>Alert</strong> - beta版のため不具合が発生する恐れがあります</div>
-            <p>例：1つめのエンチャントレベルの値をnullにするとそれ以降のエンチャント効果が無効になります。</p>
+            <p>5つすべてのエンチャント効果を選択しないとバグります.</p>
             <form name="frame">
                 <h2>入力項目</h2>
                 <table border="0" width="100%" class="table">
