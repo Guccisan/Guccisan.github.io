@@ -295,15 +295,23 @@
                         <td><input type="text" name="enchantment_level" value="1" class="form-control">
                         </td>
                     </tr>
-                    <tr>
-                        <td style="vertical-align: middle;"><input class="btn btn-primary" type="button" name="generate"
-                                onclick="Generate()" value="コマンド生成">
-                            <input class="btn btn-secondary" type="button" name="copy" onclick="copyToClipboard()"
-                                value="コピー"></td>
-                        <td><input type="text" name="output" value="" class="form-control" id="output">
-                        </td>
-                    </tr>
                 </table>
+
+                <div class="row" style="margin: 15px 0;">
+                    <div class="offset-md-4 col-md-4" style="padding: 0 0;">
+                        <input class="btn btn-primary btn-block" type="button" name="generate" onclick="Generate()"
+                            value="コマンド生成">
+                    </div>
+                </div>
+                <div class="row">
+                    <h2>出力結果</h2>
+                    <input type="text" name="output" value="" class="form-control" id="output" style="margin: 15px 0;">
+                    <div class="offset-md-4 col-md-4" style="padding: 0 0;">
+                        <input class="btn btn-secondary btn-block" type="button" name="copy" onclick="copyToClipboard()"
+                            value="コピー" style="margin: 0 0 15px 0;">
+                    </div>
+                </div>
+
             </form>
         </div>
     </main>
