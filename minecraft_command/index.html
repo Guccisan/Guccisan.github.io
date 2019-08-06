@@ -76,7 +76,7 @@
             if ((form.name.value.length > 0) && (flug)) {
                 name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]},";
             }
-            else {
+            else if ((form.name.value.length > 0) && !(flug)) {
                 name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]}}";
             }
 
