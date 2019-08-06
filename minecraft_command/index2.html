@@ -31,57 +31,18 @@
         });
     </script>
     <script>
-        function Checkbox_cnt() {
-            var flag = false; // 選択されているか否かを判定する変数
-
-            for (var i = 0; i < document.frame.check.length; i++) {
-
-                // i番目のチェックボックスがチェックされているかを判定
-                if (document.frame.check[i].checked) {
-                    flag = true;
-                    alert(i + "が選択されました。");
-                }
-            }
-
-            // 何も選択されていない場合の処理   
-            if (!flag) {
-                alert("項目が選択されていません。");
-            }
-        }
-
         function Generate() {
-            var flug = false;
             var form = document.forms.frame;
             var name = "{";
             var ench = " ";
-            var array = [];
-
-            for (var i = 0; i < frame.check.length; i++) {
-                // i番目のチェックボックスがチェックされているかを判定
-                if (document.frame.check[i].checked) {
-                    flug = true;
-                    if(i==0) array.push("{id:" + form.enchantment_effect1.value + ",lvl:" + form.enchantment_level1.value + "}");
-                    else if(i==1) array.push("{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "}");
-                    else if(i==2) array.push("{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "}");
-                    else if(i==3) array.push("{id:" + form.enchantment_effect4.value + ",lvl:" + form.enchantment_level4.value + "}");
-                    else if(i==4) array.push("{id:" + form.enchantment_effect5.value + ",lvl:" + form.enchantment_level5.value + "}");
-                }
-            }
-            if (flug){
-                ench = array.join(',');
-                    ench = "ench:[" + ench + "]";
-
-                alert(ench);
-            }
-
-            if ((form.name.value.length > 0) && (flug)) {
+            if (form.name.value.length > 0) {
                 name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]},";
             }
-            else {
+            else if ((form.name.value.length > 0) && (form.enchantment_level2.value.length == 0)) {
                 name = "{display:{Name:\"" + form.name.value + "\",Lore:[\"" + form.description.value + "\"]}}";
             }
 
-            // ench = "ench:[{id:" + form.enchantment_effect1.value + ",lvl:" + form.enchantment_level1.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "},{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "},{id:" + form.enchantment_effect4.value + ",lvl:" + form.enchantment_level4.value + "},{id:" + form.enchantment_effect5.value + ",lvl:" + form.enchantment_level5.value + "}]}";
+            ench = "ench:[{id:" + form.enchantment_effect1.value + ",lvl:" + form.enchantment_level1.value + "},{id:" + form.enchantment_effect2.value + ",lvl:" + form.enchantment_level2.value + "},{id:" + form.enchantment_effect3.value + ",lvl:" + form.enchantment_level3.value + "},{id:" + form.enchantment_effect4.value + ",lvl:" + form.enchantment_level4.value + "},{id:" + form.enchantment_effect5.value + ",lvl:" + form.enchantment_level5.value + "}]}";
 
             //アラート
             // alert("コマンド生成しました。");
@@ -222,7 +183,7 @@
         <!-- メインコンテンツ -->
         <div class="container main">
             <div class="alert alert-danger" role="alert"><strong>Alert</strong> - beta版のため不具合が発生する恐れがあります</div>
-            <p>チェックした項目の入力内容がコマンドに変換されます。チェックを外した項目はコマンドに反映されません。</p>
+            <p>5つすべてのエンチャント効果を選択しないとバグります.</p>
             <form name="frame">
                 <h2>入力項目</h2>
                 <table border="0" width="100%" class="table">
@@ -300,14 +261,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align: middle;">
-                            <div class="form-check">
-                                <input name="check" class="form-check-input" type="checkbox" value="1" id="enchCheck1">
-                                <label class="form-check-label" for="enchCheck1">
-                                    エンチャント効果1
-                                </label>
-                            </div>
-                        </td>
+                        <td style="vertical-align: middle;">エンチャント効果1</td>
                         <td><select class="form-control" name="enchantment_effect1">
                                 <option value="0">0:ダメージ軽減</option>
                                 <option value="1">1:火炎耐性</option>
@@ -347,14 +301,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align: middle;">
-                            <div class="form-check">
-                                <input name="check" class="form-check-input" type="checkbox" value="2" id="enchCheck2">
-                                <label class="form-check-label" for="enchCheck2">
-                                    エンチャント効果2
-                                </label>
-                            </div>
-                        </td>
+                        <td style="vertical-align: middle;">エンチャント効果2</td>
                         <td><select class="form-control" name="enchantment_effect2">
                                 <option value="0">0:ダメージ軽減</option>
                                 <option value="1">1:火炎耐性</option>
@@ -394,14 +341,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align: middle;">
-                            <div class="form-check">
-                                <input name="check" class="form-check-input" type="checkbox" value="3" id="enchCheck3">
-                                <label class="form-check-label" for="enchCheck3">
-                                    エンチャント効果3
-                                </label>
-                            </div>
-                        </td>
+                        <td style="vertical-align: middle;">エンチャント効果3</td>
                         <td><select class="form-control" name="enchantment_effect3">
                                 <option value="0">0:ダメージ軽減</option>
                                 <option value="1">1:火炎耐性</option>
@@ -441,14 +381,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align: middle;">
-                            <div class="form-check">
-                                <input name="check" class="form-check-input" type="checkbox" value="4" id="enchCheck4">
-                                <label class="form-check-label" for="enchCheck4">
-                                    エンチャント効果4
-                                </label>
-                            </div>
-                        </td>
+                        <td style="vertical-align: middle;">エンチャント効果4</td>
                         <td><select class="form-control" name="enchantment_effect4">
                                 <option value="0">0:ダメージ軽減</option>
                                 <option value="1">1:火炎耐性</option>
@@ -488,14 +421,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align: middle;">
-                            <div class="form-check">
-                                <input name="check" class="form-check-input" type="checkbox" value="5" id="enchCheck5">
-                                <label class="form-check-label" for="enchCheck5">
-                                    エンチャント効果5
-                                </label>
-                            </div>
-                        </td>
+                        <td style="vertical-align: middle;">エンチャント効果5</td>
                         <td><select class="form-control" name="enchantment_effect5">
                                 <option value="0">0:ダメージ軽減</option>
                                 <option value="1">1:火炎耐性</option>
@@ -538,13 +464,13 @@
 
                 <div class="row" style="margin: 15px 0;">
                     <div class="offset-md-4 col-md-4" style="padding: 0 0;">
-                        <input class="btn btn-primary btn-block" type="button" name="generate"
-                            onclick="Generate()" value="コマンド生成">
+                        <input class="btn btn-primary btn-block" type="button" name="generate" onclick="Generate()"
+                            value="コマンド生成">
                     </div>
                 </div>
                 <div class="row">
                     <h2>出力結果</h2>
-                    <textarea type="text" name="output" value="" class="form-control" id="output" style="margin: 15px 0;"></textarea>
+                    <input type="text" name="output" value="" class="form-control" id="output" style="margin: 15px 0;">
                     <div class="offset-md-4 col-md-4" style="padding: 0 0;">
                         <input class="btn btn-secondary btn-block" type="button" name="copy" onclick="copyToClipboard()"
                             value="コマンドをコピー" style="margin: 0 0 15px 0;">
