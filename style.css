@@ -22,9 +22,9 @@ nav.globalMenuSp {
   right: 0;
   text-align: center;
   transform: translateY(-100%);
-  transition: ease 0.6s;
-  -moz-transition: ease 0.6s; /* Firefox 4 */
-  -webkit-transition: ease 0.6s; /* Safari and Chrome */
+  transition: 0.6s;
+  -moz-transition: 0.6s; /* Firefox 4 */
+  -webkit-transition: 0.6s; /* Safari and Chrome */
   width: 100%;
   overflow-y: auto;
 }
