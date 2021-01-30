@@ -34,7 +34,10 @@ margin: 0 auto;
 padding: 0;
 width: 100%;
 }
-nav.globalMenuSp ul li {border: none;}
+nav.globalMenuSp ul li {
+  border: none;
+  height: 3em;
+}
 nav.globalMenuSp ul li p{
 background: rgb(104, 111, 119);
 display: block;
