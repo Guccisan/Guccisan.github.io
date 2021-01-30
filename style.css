@@ -36,8 +36,7 @@ width: 100%;
 }
 nav.globalMenuSp ul li {
   border: none;
-  height: 50px;/**/
-  font-size: 16px;/**/
+  font-size: 16px;
 }
 nav.globalMenuSp ul li p{
 background: rgb(104, 111, 119);
