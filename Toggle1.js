@@ -12,7 +12,8 @@ $(function() {
         $(this).toggleClass('active');
  
         if ($(this).hasClass('active')) {
-            $('.dropdown').css('display', 'block');
+           $(this).find('.dropdown').slideToggle();
+           /* $('.dropdown').css('display', 'block');*/
         } else {
             $('.dropdown').css('display', 'none');
         }
