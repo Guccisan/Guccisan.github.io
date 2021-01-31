@@ -12,10 +12,10 @@ $(function() {
         $(this).toggleClass('active');
  
         if ($(this).hasClass('active')) {
-           $(this).find('.dropdown').slideToggle();
+           $(this).find('.dropdown').css('display', 'block');
            /* $('.dropdown').css('display', 'block');*/
         } else {
-            $('.dropdown').css('display', 'none');
+            $(this).find('.dropdown').css('display', 'none');
         }
     });
 });
