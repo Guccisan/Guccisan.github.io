@@ -1,3 +1,16 @@
+/*Reset*/
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  letter-spacing: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
 /*Header==============================================================================================================*/
     .header {
       position: relative;
@@ -7,35 +20,26 @@
       padding-top: 0;
     }
 
-    .header .sub_navi {
-      position: static;
-      top: auto;
-      right: auto;
-      text-align: center;
+/*Headerのlogo*/
+    .header .logo {
+      position: fixed;
+      z-index: 198;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      height: 40px;
+      width: 100%;
       background-color: #fff;
-    }
-  
-    .header .sub_navi li {
-        display: inline-block;
-        font-size: 1.2rem;
-      margin-left: 0;
-      margin-right: 10px;
       padding: 10px 0;
+      text-align: center;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
     }
-  
-  .header .sub_navi li a {
-    color: #353535;
-    text-decoration: none;
-  }
-  
-  .header .sub_navi li a:hover {
-    text-decoration: underline;
-  }
-  
-  .header .sub_navi li.sub_navi-search {
-    display: none;
-  }
-    
+    .header .logo img {
+      width: 100px;
+    }
+/*Headerのlogo*/
+
+/*メニュー画面*/
     .header nav {
       position: fixed;
       top: 0;
@@ -45,18 +49,17 @@
       overflow: scroll;
       transform: translateY(-100%);
       z-index: 999;
-      transition: all .8s;
+      /* transition: all .4s; */
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
       background-color: #fff;
+      margin-top: 0;
       -webkit-overflow-scrolling: touch;
     }
-  
-  .header nav .main_navi {
-    display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    margin: 0 auto;
-  }
+/*メニュー画面*/
 
+/*メインメニュー*/
     .header nav .main_navi {
       display: block;
       padding: 0;
@@ -65,13 +68,18 @@
       width: auto;
       background-color: #353535;
     }
+/*メインメニュー*/
 
+/*メインメニューのリスト*/
     .header nav .main_navi > li {
       height: auto;
       text-align: left;
       border-bottom: 1px solid #666;
+      margin-block-start: 0;
     }
+/*メインメニューのリスト*/
   
+/*メインメニューのリストのｖ*/
     .btn_has_child:after {
       content: "\f078";
       font-family: "Font Awesome 5 Free";
@@ -79,39 +87,31 @@
       position: absolute;
       right: 20px;
     }
+/*メインメニューのリストのｖ*/
 
+/*サブメニューがあるメインメニュー*/
   .header nav .main_navi > li > a, .header nav .main_navi > li span {
     display: block;
-    padding: 20px 0;
-    height: 62px;
+    padding: 20px 20px;
+    height: auto;
     color: #fff;
     cursor: pointer;
     position: relative;
   }
+/*サブメニューがあるメインメニュー*/ 
 
-    .header nav .main_navi > li > a, .header nav .main_navi > li span {
-      padding: 20px;
-    }
-  
-  .header nav .main_navi > li > a:hover, .header nav .main_navi > li span:hover {
-    text-decoration: underline;
-    border-bottom: 3px solid #be2121;
-  }
-  
-  .header nav .main_navi > li span.active {
-    border-bottom: 3px solid #be2121;
-  }
-  
+/*サブメニュー*/ 
   .header nav .main_navi > li div.dropdown {
     position: absolute;
     z-index: 9980;
     top: 61px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #303030;
     width: 100%;
     height: auto;
     text-align: left;
   }
+/*サブメニュー*/
 
     .header nav .main_navi > li div.dropdown {
       position: static;
@@ -173,8 +173,6 @@
     content: "\f105";
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
-    /* position: absolute;
-    right: 20px; */
   }
   
   .header nav .main_navi > li div.dropdown .btn_dropdown_close {
@@ -282,22 +280,5 @@
     .header nav.active {
       transform: translateY(0%);
     }
-  
-  .header_s {
-    padding-top: 55px;
-  }
-  .header_s .logo {
-    position: absolute;
-    top: 10px;
-    left: calc(50% - 500px);
-    padding: 0;
-    transition: .2s;
-  }
-  .header_s .logo img {
-    width: 100px;
-  }
-  .header_s .sub_navi {
-    top: -40px;
-  }
-  
+
   /*Header==============================================================================================================*/
