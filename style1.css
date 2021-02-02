@@ -20,6 +20,9 @@ pre {
   font-size: 1em;
   text-align: justify;
   text-justify: inter-ideograph;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   }
 
 /*Header==============================================================================================================*/
