@@ -200,7 +200,7 @@ body{
   }
   
   
- 
+/* トグルボタン関係 */ 
     .header .toggle {
       position: fixed;
       /* bodyに対しての絶対位置指定 */
@@ -213,8 +213,6 @@ body{
       z-index: 9999;
     }
   
-  
-
     .header .toggle span {
       display: block;
       position: absolute;
@@ -279,5 +277,5 @@ body{
     .header nav.active {
       transform: translateY(0%);
     }
-
+/* トグルボタン関係 */
   /*Header==============================================================================================================*/
