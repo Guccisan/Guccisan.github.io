@@ -50,7 +50,7 @@ pre {
 .header_s .sub_navi {
   top: -40px;
 }
-@media screen and (max-width: 812) {
+@media screen and (max-width: 812px) {
   .header {
     position: relative;
     z-index: 199;
@@ -60,7 +60,7 @@ pre {
 }
 
 /*Headerのlogo*/
-@media screen and (max-width: 812) {
+@media screen and (max-width: 812px) {
   .header .logo {
     position: absolute;
     top: 30px;
