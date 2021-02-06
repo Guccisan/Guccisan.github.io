@@ -223,7 +223,7 @@ pre {
 
   @media screen and (max-width: 812px) {
   .header nav .main_navi > li div.dropdown .dropdown_inner {
-    width: 1000px;
+    width: auto;
     /* margin: 45px auto 30px; */
   }
   }
