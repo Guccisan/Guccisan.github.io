@@ -49,6 +49,21 @@ pre {
   background-color: #fff;
   z-index: 100;
   padding-top: 118px;
+}.header_s {
+  padding-top: 55px;
+}
+.header_s .logo {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 500px);
+  padding: 0;
+  transition: .2s;
+}
+.header_s .logo img {
+  width: 100px;
+}
+.header_s .sub_navi {
+  top: -40px;
 }
 @media screen and (max-width: 768) {
   .header {

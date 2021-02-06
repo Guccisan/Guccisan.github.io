@@ -44,3 +44,38 @@ $(function() {
 
     
 });
+
+
+
+
+var windowWidth = $(window).width();
+var windowSm = 768;
+if (windowWidth <= windowSm) {
+    //横幅768px以下のとき（つまりスマホ時）に行う処理を書く
+} else {
+    //ナビスクロールで小さく
+    function init() {
+        // スクロールして何ピクセルでアニメーションさせるか
+        var px_change   = 100;
+
+        // スクロールのイベントハンドラを登録
+        window.addEventListener('scroll', function(e){
+            // 変化するポイントまでスクロールしたらクラスを追加
+            if ( $(window).scrollTop() > px_change ) {
+                $("header").addClass("header_s");
+
+            // 変化するポイント以前であればクラスを削除
+            } else if ( $("header").hasClass("header_s") ) {
+                $("header").removeClass("header_s");
+            }
+        });
+    }
+    window.onload = init();
+}
+
+    /*iPadのUAを取得してaddClass
+    var ua = navigator.userAgent;
+    if(/iPhone|iPad|iPod/.test(ua)) {
+      $(".main_navi li a,.main_navi li span").addClass("ios");
+    }
+    */
