@@ -15,22 +15,6 @@ ul{
   list-style: none;
 }
 
-  article{
-    display: block;
-    padding-top: 200px;
-    padding-bottom: 80px;
-    padding-right: calc(50% - 500px);
-    padding-left: calc(50% - 500px);
-  }
-
-@media screen and (max-width: 812) {
-article{
-  display: block;
-  padding-top: 80px;
-  padding-bottom: 20px;
-}
-}
-
 pre {
   width: 100%;
   font-family: sans-serif;
@@ -49,7 +33,8 @@ pre {
   background-color: #fff;
   z-index: 100;
   padding-top: 118px;
-}.header_s {
+}
+.header_s {
   padding-top: 55px;
 }
 .header_s .logo {
@@ -396,3 +381,19 @@ pre {
   }
 /* トグルボタン関係 */
   /*Header==============================================================================================================*/
+
+  .conss{
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 80px;
+    padding-right: calc(50% - 500px);
+    padding-left: calc(50% - 500px);
+  }
+
+  @media screen and (max-width: 812px) {
+.conss{
+  display: block;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+}
