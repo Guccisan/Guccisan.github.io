@@ -19,10 +19,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+  article{
+    padding-top: 200px;
+    padding-bottom: 80px;
+  }
+
 @media screen and (max-width: 768) {
 article{
-  padding-top: 200px;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 20px;
 }
 }
 
