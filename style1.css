@@ -15,18 +15,17 @@ ul{
   list-style: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
   article{
+    display: block;
     padding-top: 200px;
     padding-bottom: 80px;
-    padding: 0 calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+    padding-left: calc(50% - 500px);
   }
 
 @media screen and (max-width: 812) {
 article{
+  display: block;
   padding-top: 80px;
   padding-bottom: 20px;
 }
