@@ -24,7 +24,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     padding-bottom: 80px;
   }
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 812) {
 article{
   padding-top: 80px;
   padding-bottom: 20px;
@@ -65,7 +65,7 @@ pre {
 .header_s .sub_navi {
   top: -40px;
 }
-@media screen and (max-width: 768) {
+@media screen and (max-width: 812) {
   .header {
     position: relative;
     z-index: 199;
@@ -75,7 +75,7 @@ pre {
 }
 
 /*Headerのlogo*/
-@media screen and (max-width: 768) {
+@media screen and (max-width: 812) {
   .header .logo {
     position: absolute;
     top: 30px;
@@ -109,7 +109,7 @@ pre {
 }
 
 /*メニュー画面*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
     .header nav {
       position: fixed;
       top: 0;
@@ -135,7 +135,7 @@ pre {
   margin: 0 auto;
 }
 /*メインメニュー*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
     .header nav .main_navi {
       display: block;
       padding: 0;
@@ -157,7 +157,7 @@ pre {
 /*メインメニューのリスト*/
   
 /*メインメニューのリストのｖ*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
     .btn_has_child:after {
       content: "\f078";
       font-family: "Font Awesome 5 Free";
@@ -191,7 +191,7 @@ pre {
 }
 
 /*サブメニュー*/ 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
   .header nav .main_navi > li div.dropdown {
     position: static;
     top: auto;
@@ -222,14 +222,14 @@ pre {
       margin: 45px auto 30px;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
   .header nav .main_navi > li div.dropdown .dropdown_inner {
     width: auto;
     margin: 0;
   }
 }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
   .header nav .main_navi > li div.dropdown .dropdown_inner {
     width: 1000px;
     margin: 45px auto 30px;
@@ -242,7 +242,7 @@ pre {
     width: 1000px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     .header nav .main_navi > li div.dropdown .dropdown_inner ul {
       display: block;
       padding: 15px 10px 0;
@@ -257,7 +257,7 @@ pre {
     padding-bottom: 15px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     .header nav .main_navi > li div.dropdown .dropdown_inner ul li {
       font-size: 1rem;
       display: inline-block;
@@ -294,7 +294,7 @@ pre {
     cursor: pointer;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     .header nav .main_navi > li div.dropdown .btn_dropdown_close {
       display: none;
     }
@@ -316,7 +316,7 @@ pre {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
     .header .toggle {
       position: fixed;
       /* bodyに対しての絶対位置指定 */

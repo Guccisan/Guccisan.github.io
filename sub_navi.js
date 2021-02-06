@@ -49,9 +49,9 @@ $(function() {
 
 
 var windowWidth = $(window).width();
-var windowSm = 768;
+var windowSm = 812;
 if (windowWidth <= windowSm) {
-    //横幅768px以下のとき（つまりスマホ時）に行う処理を書く
+    //横幅812px以下のとき（つまりスマホ時）に行う処理を書く
 } else {
     //ナビスクロールで小さく
     function init() {
