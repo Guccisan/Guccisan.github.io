@@ -31,13 +31,20 @@ pre {
   }
 
 /*Header==============================================================================================================*/
-    .header {
-      position: relative;
-      width: 100%;
-      background-color: #fff;
-      z-index: 199;
-      padding-top: 0;
-    }
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  padding-top: 118px;
+}
+@media screen and (max-width: 768) {
+  .header {
+    position: relative;
+    z-index: 199;
+    padding-top: 0;
+  }
+}
 
 /*Headerのlogo*/
     .header .logo {
