@@ -78,13 +78,13 @@ pre {
     @media screen and (max-width: 812px) {
       .header .logo {
         position: absolute;
-        top: 30px;
+        top: 8px;
         left: 50%;
       }
 
       .header_s .logo {
         position: absolute;
-        top: 30px;
+        top: 8px;
         left: 50%;
       }
     }
