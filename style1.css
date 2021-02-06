@@ -70,10 +70,19 @@ pre {
     position: relative;
     z-index: 199;
     padding-top: 0;
+    padding-top: 55px;
   }
 }
 
 /*Headerのlogo*/
+@media screen and (max-width: 768) {
+  .header .logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+  }
+}
+
 .header .logo {
   position: absolute;
   top: 30px;
