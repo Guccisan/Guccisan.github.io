@@ -393,7 +393,9 @@ pre {
   @media screen and (max-width: 812px) {
 .conss{
   display: block;
+  padding: 0;
   padding-top: 80px;
   padding-bottom: 20px;
+  pa
 }
 }
