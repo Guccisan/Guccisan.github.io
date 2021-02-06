@@ -80,12 +80,14 @@ pre {
         position: absolute;
         top: 8px;
         left: 50%;
+        box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 40%);
       }
 
       .header_s .logo {
         position: absolute;
         top: 8px;
         left: 50%;
+        box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 40%);
       }
     }
 
