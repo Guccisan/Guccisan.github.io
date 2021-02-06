@@ -7,11 +7,16 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
   letter-spacing: 0;
 }
 
+body{
+  margin: 65px 0px 10px 0px;
+}
+
 a{
   text-decoration: none;
 }
-body{
-  margin: 65px 0px 10px 0px;
+
+ul{
+  list-style: none;
 }
 
 pre {
@@ -53,7 +58,14 @@ pre {
     }
 /*Headerのlogo*/
 
+.header nav {
+  position: relative;
+  z-index: 9990;
+  background-color: #353535;
+}
+
 /*メニュー画面*/
+@media screen and (max-width: 768px) {
     .header nav {
       position: fixed;
       top: 0;
@@ -68,9 +80,18 @@ pre {
       margin-top: 0;
       -webkit-overflow-scrolling: touch;
     }
+  }
+  
 /*メニュー画面*/
 
+.header nav .main_navi {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 0 auto;
+}
 /*メインメニュー*/
+@media screen and (max-width: 768px) {
     .header nav .main_navi {
       display: block;
       padding: 0;
@@ -79,6 +100,7 @@ pre {
       width: auto;
       background-color: #353535;
     }
+  }
 /*メインメニュー*/
 
 /*メインメニューのリスト*/
@@ -91,6 +113,7 @@ pre {
 /*メインメニューのリスト*/
   
 /*メインメニューのリストのｖ*/
+@media screen and (max-width: 768px) {
     .btn_has_child:after {
       content: "\f078";
       font-family: "Font Awesome 5 Free";
@@ -98,6 +121,7 @@ pre {
       position: absolute;
       right: 20px;
     }
+  }
 /*メインメニューのリストのｖ*/
 
 /*サブメニューがあるメインメニュー*/
@@ -111,56 +135,85 @@ pre {
   }
 /*サブメニューがあるメインメニュー*/ 
 
-/*サブメニュー*/ 
-  .header nav .main_navi > li div.dropdown {
+.header nav .main_navi > li div.dropdown {
     position: absolute;
     z-index: 9980;
     top: 61px;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+/*サブメニュー*/ 
+@media screen and (max-width: 768px) {
+  .header nav .main_navi > li div.dropdown {
+    position: static;
+    top: auto;
+    left: auto;
+    padding: 0;
+    /* position: absolute; */
+    z-index: 9980;
+    /* top: 61px;
+    left: 0; */
     background-color: #303030;
     width: 100%;
     height: auto;
     text-align: left;
   }
+}
 /*サブメニュー*/
 
-    .header nav .main_navi > li div.dropdown {
+    /* .header nav .main_navi > li div.dropdown {
       position: static;
       z-index: auto;
       top: auto;
       left: auto;
       padding: 0;
-    }
+    } */
+
+    .header nav .main_navi > li div.dropdown .dropdown_inner {
+      width: 1000px;
+      margin: 45px auto 30px;
+  }
   
+  @media screen and (max-width: 768px) {
+  .header nav .main_navi > li div.dropdown .dropdown_inner {
+    width: auto;
+    margin: 0;
+  }
+}
+
+  @media screen and (max-width: 768px) {
   .header nav .main_navi > li div.dropdown .dropdown_inner {
     width: 1000px;
     margin: 45px auto 30px;
   }
+  }
 
-    .header nav .main_navi > li div.dropdown .dropdown_inner {
-      width: auto;
-      margin: 0;
-    }
-  
   .header nav .main_navi > li div.dropdown .dropdown_inner ul {
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
   }
 
+  @media screen and (max-width: 768px) {
     .header nav .main_navi > li div.dropdown .dropdown_inner ul {
       display: block;
       padding: 15px 10px 0;
       font-size: 0;
       width: auto;
     }
+  }
   
   .header nav .main_navi > li div.dropdown .dropdown_inner ul li {
-    width: 200px;
+    width: 170px;
     padding-right: 30px;
     padding-bottom: 15px;
   }
 
+  @media screen and (max-width: 768px) {
     .header nav .main_navi > li div.dropdown .dropdown_inner ul li {
       font-size: 1rem;
       display: inline-block;
@@ -168,12 +221,13 @@ pre {
       width: 50%;
       padding-right: 0;
     }
-  
+  }
   
   .header nav .main_navi > li div.dropdown .dropdown_inner ul li:nth-child(5n) {
     padding-right: 0;
   }
   
+
   .header nav .main_navi > li div.dropdown .dropdown_inner ul li a {
     display: block;
     color: #fff;
@@ -190,16 +244,17 @@ pre {
     display: block;
     background-color: #000;
     color: #fff;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     padding: 10px 0;
     text-align: center;
     cursor: pointer;
   }
 
+  @media screen and (max-width: 768px) {
     .header nav .main_navi > li div.dropdown .btn_dropdown_close {
       display: none;
     }
-  
+  }
   
   .header nav .main_navi > li div.dropdown .btn_dropdown_close:before {
     content: "×";
@@ -211,8 +266,13 @@ pre {
     text-decoration: underline;
   }
   
-  
+
 /* トグルボタン関係 */ 
+.header .toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
     .header .toggle {
       position: fixed;
       /* bodyに対しての絶対位置指定 */
@@ -289,5 +349,6 @@ pre {
     .header nav.active {
       transform: translateY(0%);
     }
+  }
 /* トグルボタン関係 */
   /*Header==============================================================================================================*/
