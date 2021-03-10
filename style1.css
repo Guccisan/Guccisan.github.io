@@ -390,7 +390,17 @@ pre {
 /* トグルボタン関係 */
   /*Header==============================================================================================================*/
 
-  .conss{
+  .mainc{
+    padding-top: 200px;
+  }
+
+  @media screen and (max-width: 812px) {
+  .mainc{
+  padding-top: 80px;
+  }
+}
+
+  /* .conss{
     display: block;
     padding-top: 200px;
     padding-bottom: 80px;
@@ -405,4 +415,4 @@ pre {
   padding-top: 80px;
   padding-bottom: 20px;
 }
-}
+} */
