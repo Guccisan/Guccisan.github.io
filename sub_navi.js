@@ -11,9 +11,9 @@ $(function() {
             // .dropdownの中から表示している要素を探す
             $('.dropdown').each(function(){
                 if($(this).is(':visible')){
-                    //ドロップダウン非表示
+                    //ドロップダウン非表示,openボタンのアイコン変更用classを削除
                     $(this).slideUp();
-                    $(this).prev('span').removeClass('active');
+                    $(this).prev('span').removeClass('active open');
                     closed = $(this).prev('span');
                 }
             })
@@ -25,8 +25,8 @@ $(function() {
                     if(closed == null || !closed.is(clicked)) {
                         //ドロップダウン表示
                         clicked.next('.dropdown').slideDown();
-                        //クリックされたspanにactiveを付与
-                        clicked.addClass('active');
+                        //クリックされたspanにactiveを付与,openボタンのアイコン変更用classを追加
+                        clicked.addClass('active open');
                     }
                 }
             }

@@ -157,6 +157,13 @@ pre {
       position: absolute;
       right: 20px;
     }
+    .open:after{
+      content: "\f077";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      position: absolute;
+      right: 20px;
+    }
   }
 /*メインメニューのリストのｖ*/
 
