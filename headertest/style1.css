@@ -1,0 +1,424 @@
+/*Reset*/
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  letter-spacing: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+pre {
+  width: 100%;
+  font-family: sans-serif;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  }
+
+/*Header==============================================================================================================*/
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  padding-top: 118px;
+}
+.header_s {
+  padding-top: 55px;
+}
+.header_s .logo {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 500px);
+  padding: 0;
+  transition: .2s;
+}
+.header_s .logo img {
+  width: 100px;
+}
+.header_s .sub_navi {
+  top: -40px;
+}
+@media screen and (max-width: 812px) {
+  .header {
+    position: fixed;
+    z-index: 199;
+    padding-top: 0;
+    padding-top: 55px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 40%);
+  }
+}
+
+/*Headerのlogo*/
+.header .logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .2s;
+}
+.header_s .logo {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 500px);
+  padding: 0;
+  transition: .2s;
+}
+
+    @media screen and (max-width: 812px) {
+      .header .logo {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+      }
+
+      .header_s .logo {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+      }
+    }
+
+    .header .logo img {
+      width: 100px;
+    }
+/*Headerのlogo*/
+
+.header nav {
+  position: relative;
+  z-index: 9990;
+  background-color: #353535;
+}
+
+/*メニュー画面*/
+@media screen and (max-width: 812px) {
+    .header nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      /* height: 100vh; */
+      overflow: scroll;
+      transform: translateY(-100%);
+      z-index: 999;
+      transition: all .5s;
+      background-color: #fff;
+      margin-top: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+/*メニュー画面*/
+
+.header nav .main_navi {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 0 auto;
+}
+/*メインメニュー*/
+@media screen and (max-width: 812px) {
+    .header nav .main_navi {
+      display: block;
+      padding: 0;
+      position: static;
+      z-index: 198;
+      width: auto;
+      background-color: #353535;
+    }
+  }
+/*メインメニュー*/
+
+/*メインメニューのリスト*/
+    .header nav .main_navi > li {
+      height: auto;
+      text-align: left;
+      border-bottom: 1px solid #666;
+      margin-block-start: 0;
+    }
+/*メインメニューのリスト*/
+  
+/*メインメニューのリストのｖ*/
+@media screen and (max-width: 812px) {
+    .btn_has_child:after {
+      content: "\f078";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      position: absolute;
+      right: 20px;
+    }
+    .open:after{
+      content: "\f077";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      position: absolute;
+      right: 20px;
+    }
+  }
+/*メインメニューのリストのｖ*/
+
+/*サブメニューがあるメインメニュー*/
+  .header nav .main_navi > li > a, .header nav .main_navi > li span {
+    display: block;
+    padding: 20px 20px;
+    height: auto;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+  }
+/*サブメニューがあるメインメニュー*/ 
+
+.header nav .main_navi > li div.dropdown {
+    position: absolute;
+    z-index: 9980;
+    top: 61px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+/*サブメニュー*/ 
+@media screen and (max-width: 812px) {
+  .header nav .main_navi > li div.dropdown {
+    position: static;
+    top: auto;
+    left: auto;
+    padding: 0;
+    /* position: absolute; */
+    z-index: 9980;
+    /* top: 61px;
+    left: 0; */
+    background-color: #303030;
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+}
+/*サブメニュー*/
+
+    /* .header nav .main_navi > li div.dropdown {
+      position: static;
+      z-index: auto;
+      top: auto;
+      left: auto;
+      padding: 0;
+    } */
+
+    .header nav .main_navi > li div.dropdown .dropdown_inner {
+      width: 1000px;
+      margin: 45px auto 30px;
+  }
+  
+  @media screen and (max-width: 812px) {
+  .header nav .main_navi > li div.dropdown .dropdown_inner {
+    width: auto;
+    margin: 0;
+  }
+}
+
+  @media screen and (max-width: 812px) {
+  .header nav .main_navi > li div.dropdown .dropdown_inner {
+    width: auto;
+    /* margin: 45px auto 30px; */
+  }
+  }
+
+  .header nav .main_navi > li div.dropdown .dropdown_inner ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+  }
+
+  @media screen and (max-width: 812px) {
+    .header nav .main_navi > li div.dropdown .dropdown_inner ul {
+      display: block;
+      padding: 15px 10px 0;
+      font-size: 0;
+      width: auto;
+    }
+  }
+  
+  .header nav .main_navi > li div.dropdown .dropdown_inner ul li {
+    width: 200px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+  }
+
+  @media screen and (max-width: 812px) {
+    .header nav .main_navi > li div.dropdown .dropdown_inner ul li {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      padding-right: 0;
+    }
+  }
+  
+  .header nav .main_navi > li div.dropdown .dropdown_inner ul li:nth-child(5n) {
+    padding-right: 0;
+  }
+  
+
+  .header nav .main_navi > li div.dropdown .dropdown_inner ul li a {
+    display: block;
+    color: #fff;
+    padding-left: 15px;
+  }
+
+  .header nav .main_navi > li div.dropdown .dropdown_inner ul li a:before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+  }
+  
+  .header nav .main_navi > li div.dropdown .btn_dropdown_close {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    /* font-size: 1.4rem; */
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 812px) {
+    .header nav .main_navi > li div.dropdown .btn_dropdown_close {
+      display: none;
+    }
+  }
+  
+  .header nav .main_navi > li div.dropdown .btn_dropdown_close:before {
+    content: "×";
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .header nav .main_navi > li div.dropdown .btn_dropdown_close:hover {
+    text-decoration: underline;
+  }
+  
+
+/* トグルボタン関係 */ 
+.header .toggle {
+  display: none;
+}
+
+@media screen and (max-width: 812px) {
+    .header .toggle {
+      position: fixed;
+      /* bodyに対しての絶対位置指定 */
+      right: 10px;
+      top: 6px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+  
+    .header .toggle span {
+      display: block;
+      position: absolute;
+      /* .toggleに対して */
+      width: 70%;
+      border-bottom: solid 3px #000;
+      -webkit-transition: .35s ease-in-out;
+      -moz-transition: .35s ease-in-out;
+      transition: .35s ease-in-out;
+      padding-top: 5px;
+      right: 7px;
+    }
+  
+    .header .toggle span:nth-child(1) {
+      top: 0px;
+    }
+  
+    .header .toggle span:nth-child(2) {
+      top: 10px;
+    }
+  
+    .header .toggle span:nth-child(3) {
+      top: 20px;
+    }
+  
+    .toggle_txt {
+      position: absolute;
+      top: 30px;
+      font-size: 9px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .header .toggle.active span {
+      border-bottom: solid 3px #fff;
+    }
+  
+    .header .toggle.active span:nth-child(1) {
+      top: 11px;
+      left: 4px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  
+    .header .toggle.active span:nth-child(2), .header .toggle.active span:nth-child(3) {
+      top: 11px;
+      left: 8px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  
+    .active .toggle_txt {
+      display: none;
+    }
+  
+    .header nav.nav_active {
+      transform: translateY(0%);
+    }
+  
+    .header nav.active {
+      transform: translateY(0%);
+    }
+  }
+/* トグルボタン関係 */
+  /*Header==============================================================================================================*/
+
+  .mainc{
+    padding-top: 200px;
+  }
+
+  @media screen and (max-width: 812px) {
+  .mainc{
+  padding-top: 80px;
+  }
+}
+
+  /* .conss{
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 80px;
+    padding-right: calc(50% - 500px);
+    padding-left: calc(50% - 500px);
+  }
+
+  @media screen and (max-width: 812px) {
+.conss{
+  display: block;
+  padding: 0;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+} */
