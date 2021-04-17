@@ -15,12 +15,12 @@ Windows10でスクリーンショットの保存先をデスクトップにし�
 <br>
 ●回答<br>
 スタートメニューで「regedit」と入力し、レジストリエディタを開く。<br>
-<img src="./img/at2_001.png" alt="img001" class="rounded mx-auto d-block" style="height:200px;"><br>
+<img src="./img/at2_001.png" alt="img001" class="rounded mx-auto d-block" style="max-height:200px; max-width:100%;"><br>
 左のツリーを辿り「コンピューター\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders」を開く→<br>
-<img src="./img/at2_002.png" alt="img002" class="rounded mx-auto d-block" style="height:200px;"><br>
+<img src="./img/at2_002.png" alt="img002" class="rounded mx-auto d-block" style="max-height:200px; max-width:100%;"><br>
 右側の「{B7BEDE81-DF94-4682-A7D8-57A52620B86F}」をダブルクリックし、下の欄に適当な場所(C:\hogehogeなど存在しないフォルダ)を入れる→<br>
-<img src="./img/at2_003.png" alt="img003" class="rounded mx-auto d-block" style="height:200px;"><br>
+<img src="./img/at2_003.png" alt="img003" class="rounded mx-auto d-block" style="max-height:200px; max-width:100%;"><br>
 ログアウトして再ログインする→スクリーンショットを撮る。<br>
 「適当な場所」に「スクリーンショット」フォルダが生成されるので右クリック→プロパティ→場所→標準に戻す→OK<br>
-<img src="./img/at2_004.png" alt="img004" class="rounded mx-auto d-block" style="height:200px;"><br>
+<img src="./img/at2_004.png" alt="img004" class="rounded mx-auto d-block" style="max-height:200px; max-width:100%;"><br>
 これで既定の場所に戻ります。ピクチャフォルダのパスがわかるならそれを初めから入れてもいいです。
