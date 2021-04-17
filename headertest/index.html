@@ -36,7 +36,7 @@
     <header class="header"></header>
     <script>
         $(function () {
-            $(".header").load("common_load_header.html");
+            $("header").load("common_load_header.html");
         });
     </script>
     <!--ヘッダー-->
@@ -48,6 +48,15 @@
 
         </div>
     </main>
+
+    <!-- フッター外部ファイル読み込み -->
+    <footer class="text-muted bg-dark"></footer>
+    <script>
+        $(function () {
+            $("footer").load("common_load_footer.html");
+        });
+    </script>
+    <!--フッター-->
 
 </body>
 
