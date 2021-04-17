@@ -1,3 +1,3 @@
 $('#input_btn').on('click', function() {
-    $('pre.ar1').load('yaskawa.txt');
+    $('pre.at1').load('yaskawa.txt');
   });
