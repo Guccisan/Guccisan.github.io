@@ -100,12 +100,12 @@
             <h1 class="d-none d-md-block">article2</h1>
             <article class="conss">
                 <pre id="content at2" style="font-family: sans-serif;"></pre>
+                <script>
+                    $(function () {
+                        $("pre #at2").load("./article/article2.txt");
+                    });
+                </script>
             </article>
-            <script>
-                $(function () {
-                    $("#at2").load("./article/article2.txt");
-                });
-            </script>
 
         </div>
     </main>
