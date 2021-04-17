@@ -87,13 +87,25 @@
             </div>
 
             <hr class="my-4">
-            <h4 class="d-block d-md-none">article</h4>
-            <h1 class="d-none d-md-block">article</h1>
+            <h4 class="d-block d-md-none">article1</h4>
+            <h1 class="d-none d-md-block">article1</h1>
 
             <article class="conss">
                 <button id="input_btn" class="btn btn-outline-info">テキストを読み込む</button>
                 <pre id="content" style="font-family: sans-serif;"></pre>
             </article>
+
+            <hr class="my-4">
+            <h4 class="d-block d-md-none">article2</h4>
+            <h1 class="d-none d-md-block">article2</h1>
+            <article class="conss">
+                <pre id="content at2" style="font-family: sans-serif;"></pre>
+            </article>
+            <script>
+                $(function () {
+                    $("#at2").load("./article/article2.txt");
+                });
+            </script>
 
         </div>
     </main>
