@@ -98,6 +98,7 @@ pre{
   position: relative;
   z-index: 9990;
   background-color: #353535;
+  width: 100%;
 }
 
 /*メニュー画面*/
@@ -117,16 +118,16 @@ pre{
       -webkit-overflow-scrolling: touch;
     }
   }
-  
 /*メニュー画面*/
 
+/*メインメニュー*/
 .header nav .main_navi {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
-/*メインメニュー*/
+
 @media screen and (max-width: 812px) {
     .header nav .main_navi {
       display: block;
@@ -142,10 +143,21 @@ pre{
 /*メインメニューのリスト*/
     .header nav .main_navi > li {
       height: auto;
+      text-align: center;
+      border-bottom: 1px solid #666;
+      margin-block-start: 0;
+      width: 25%;
+    }
+
+  @media screen and (max-width: 812px) {
+    .header nav .main_navi > li {
+      height: auto;
       text-align: left;
       border-bottom: 1px solid #666;
       margin-block-start: 0;
+      width: auto;
     }
+  }
 /*メインメニューのリスト*/
   
 /*メインメニューのリストのｖ*/
