@@ -381,7 +381,7 @@ pre{
   
     .header .toggle.active span:nth-child(1) {
       top: 11px;
-      left: 4px;
+      right: 8px;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       transform: rotate(-45deg);
@@ -389,7 +389,7 @@ pre{
   
     .header .toggle.active span:nth-child(2), .header .toggle.active span:nth-child(3) {
       top: 11px;
-      left: 8px;
+      right: 5px;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       transform: rotate(45deg);
