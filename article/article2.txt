@@ -1,6 +1,6 @@
 /* 以下のテキストは外部のtxtファイルから読み込んでいます. */<br>
-<h2>「Windows10スクリーンショットの保存場所を元に戻したい」</h2><br>
-<h3>●質問</h3><br>
+<h2>「Windows10スクリーンショットの保存場所を元に戻したい」</h2>
+<h3>●質問</h3>
 Windows10でスクリーンショットの保存先をデスクトップにしたのですが、スクリーンショットのフォルダが見当たりません。<br>
 スクリーンショットを撮るとデスクトップに直接保存されます。<br>
 そこでスクリーンショットの保存先をピクチャに戻したいのですがフォルダが見当たらず、どうにも出来ません。解決策があったら教えてください。<br>
@@ -13,7 +13,7 @@ Windows10でスクリーンショットの保存先をデスクトップにし�
 といった記載があったのですが、具体的な方法・手順を教えて頂けましたら幸いです。<br>
 <br>
 <br>
-<h3>●回答</h3><br>
+<h3>●回答</h3>
 スタートメニューで「regedit」と入力し、レジストリエディタを開く。<br>
 <a href="./img/at2_001.png"><img src="./img/at2_001.png" alt="img001" class="mx-auto d-block" style="max-height:400px; max-width:100%;"></a><br>
 左のツリーを辿り「コンピューター\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders」を開く→<br>
