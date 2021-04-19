@@ -230,7 +230,8 @@ pre{
     } */
 
     .header nav .main_navi > li div.dropdown .dropdown_inner {
-      width: 1000px;
+      width: 100%;
+      max-width: 1110px;
       margin: 45px auto 30px;
   }
   
